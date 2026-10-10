@@ -1,0 +1,256 @@
+/* Global CSS Styles for New Venkateswara Oil & Automobiles
+   Clean, Professional Automotive Retail Experience
+*/
+@import './tokens.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-light-neutral);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--color-light-neutral);
+}
+
+/* Ensure padding on mobile so bottom contact bar does not cover content */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(var(--mobile-bottom-bar-height) + env(safe-area-inset-bottom, 0px) + 8px);
+  }
+}
+
+/* Section scroll-margin to prevent header overlap on anchor jump */
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-deep-blue);
+  outline-offset: 2px;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.heading-section {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-graphite);
+  letter-spacing: 0.02em;
+}
+
+.heading-card {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-graphite);
+}
+
+/* Clean Retail Section Header */
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-deep-blue);
+  background-color: var(--color-deep-blue-subtle);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-2);
+}
+
+.section-eyebrow.yellow {
+  color: #854D0E;
+  background-color: var(--color-warm-yellow-subtle);
+}
+
+.section-subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-top: var(--space-2);
+}
+
+/* Button System (Touch targets >= 44px) */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-whatsapp,
+.btn-accent,
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1.25rem;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* Primary Button: Deep Blue */
+.btn-primary {
+  background-color: var(--color-deep-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-deep-blue);
+  box-shadow: 0 2px 4px rgba(22, 77, 170, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-deep-blue-hover);
+  border-color: var(--color-deep-blue-hover);
+  box-shadow: 0 4px 8px rgba(22, 77, 170, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Accent Button: Warm Yellow */
+.btn-accent {
+  background-color: var(--color-warm-yellow);
+  color: var(--color-graphite);
+  border: 1px solid var(--color-warm-yellow);
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(246, 184, 23, 0.25);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-warm-yellow-hover);
+  border-color: var(--color-warm-yellow-hover);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button: Clean White with border */
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-deep-blue);
+  border: 1px solid var(--color-neutral-border);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-light-neutral);
+  border-color: var(--color-deep-blue);
+  transform: translateY(-1px);
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+  border: 1px solid var(--color-whatsapp);
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-whatsapp-hover);
+  border-color: var(--color-whatsapp-hover);
+  transform: translateY(-1px);
+}
+
+/* Dark Button */
+.btn-dark {
+  background-color: var(--color-graphite);
+  color: var(--color-white);
+  border: 1px solid var(--color-graphite);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-graphite-light);
+  border-color: var(--color-graphite-light);
+  transform: translateY(-1px);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

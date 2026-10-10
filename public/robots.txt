@@ -1,0 +1,8 @@
+# Robots.txt for New Venkateswara Oil & Automobiles
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+# Sitemap location (relative or production domain endpoint)
+Sitemap: /sitemap.xml

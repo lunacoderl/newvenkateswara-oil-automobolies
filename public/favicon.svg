@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="8" fill="#101820"/>
+  <!-- Gear cog (Spare Parts) in Electric Yellow -->
+  <path d="M24 16A8 8 0 1 0 24 32A8 8 0 1 0 24 16Z" stroke="#F6B817" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 12V15M24 33V36M12 24H15M33 24H36M15.5 15.5L17.6 17.6M30.4 30.4L32.5 32.5M15.5 32.5L17.6 30.4M30.4 17.6L32.5 15.5" stroke="#F6B817" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Oil drop (Lubricants) in Deep Blue / White overlay -->
+  <path d="M24 19C24 19 28 23.5 28 26A4 4 0 0 1 20 26C20 23.5 24 19 24 19Z" fill="#164DAA" stroke="#FFFFFF" stroke-width="1.5"/>
+</svg>
