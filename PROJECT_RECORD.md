@@ -330,6 +330,30 @@ We audited all 7 newly uploaded high-resolution client photographs located in `p
 
 ---
 
+## Git Repository Initialization & GitHub Synchronization (2026-10-10)
+
+### 1. Repository Setup & Remote Linking
+- **Git Repository Initialized**: `git init` in `c:\Users\user\Desktop\Projects\new-venkateswara-oil-automobiles`.
+- **Primary Branch**: Renamed default branch to `main` (`git branch -M main`).
+- **Remote Origin**: Configured `origin` to `https://github.com/lunacoderl/venkateswara-oil-lubricants.git`.
+- **Ignored Paths**: Confirmed `.gitignore` successfully excludes `node_modules/`, `dist/`, logs, and OS caches.
+- **Vercel Configuration**: Verified `vercel.json` with SPA routing rewrites and cache headers is tracked in repository root.
+
+### 2. Comprehensive Documentation Added
+- Created repository [`README.md`](file:///c:/Users/user/Desktop/Projects/new-venkateswara-oil-automobiles/README.md) with `# venkateswara-oil-lubricants` heading, complete business profile, technology stack details, directory tree, local development commands, and Vercel one-click deployment guide.
+
+### 3. Initial Commit & Push
+- **Initial Commit (`c7bc51b`)**: Staged and committed all 76 project files with commit message: `"first commit"`.
+- **Push Result**: Successfully pushed `main` branch to GitHub remote:
+  ```
+  branch 'main' set up to track 'origin/main'.
+  To https://github.com/lunacoderl/venkateswara-oil-lubricants.git
+   * [new branch]      main -> main
+  ```
+- **Status**: Working tree clean, up to date with `origin/main`.
+
+---
+
 ## Remaining Business Information to be Confirmed with Client
 
 The website is fully functional, accurate, and completely grounded in verified storefront facts. To further enhance future iterations, the following operational details may be confirmed with the owner:
@@ -337,4 +361,5 @@ The website is fully functional, accurate, and completely grounded in verified s
 2. **Additional Transport Equipment Brands**: Confirmation if specific tractor brands (e.g. Mahindra, Swaraj) or commercial vehicle brands (e.g. Tata, BharatBenz) are stocked in addition to the prominent Ashok Leyland inventory.
 3. **Dedicated Landline or Secondary Mobile**: Whether an alternate telephone line exists in addition to the primary confirmed mobile (`9440529777`).
 4. **GST / Invoice Details**: Whether B2B tax invoice numbers or GSTIN should be displayed on commercial fleet enquiry documentation.
+
 
