@@ -354,6 +354,44 @@ We audited all 7 newly uploaded high-resolution client photographs located in `p
 
 ---
 
+## Mobile Zoom & Viewport Overflow Bug Fix (2026-10-10)
+
+### 1. Root Cause Analysis
+User reported that on mobile devices, the site appeared "zoomed in" and required pinching/zooming out to see the page properly. Forensic CSS analysis revealed multiple compounding factors:
+1. **Unconstrained Root Viewport**: `html` and `#root` lacked `overflow-x: hidden; max-width: 100%; width: 100%`, allowing mobile browser layout engines (WebKit and Chromium) to calculate document width using the widest unconstrained element rather than device screen width.
+2. **Button `white-space: nowrap`**: Globally set on `.btn`, `.btn-primary`, `.btn-whatsapp`, etc., preventing descriptive button labels (e.g. *"WhatsApp Enquiry for Lorries, Trucks & Commercial Fleets"*) from wrapping and pushing the element width to ~480px on a single line.
+3. **iOS Form Focus Auto-Zoom**: Input fields and selects configured with `font-size: var(--text-sm)` (14px). In iOS Safari, any form element with font size < 16px triggers an automatic viewport zoom-in when focused that does not zoom back out after blurring.
+4. **Desktop Header Call Button Collision**: `.btn-header-call` was visible on all screens, colliding with the brand identity and hamburger toggle on devices < 640px wide.
+5. **2-Column Tabs Squeezing on Ultra-Compact Screens**: `.vehicle-tabs-nav` and `.enquiry-tabs-bar` forced a 2-column grid on phones < 480px, causing long tab labels like *"4. Fleet & Workshop Enquiries"* and absolute badges to push the grid tracks outward.
+6. **Unwrapped Division Bar Text**: `.division-col` in the product section had `display: flex; align-items: center` without `flex-wrap: wrap`, keeping the 64-character division subtitle on a single horizontal line.
+
+### 2. Solutions Implemented
+- **`index.html`**:
+  - Updated viewport meta tag: `<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />`.
+- **`src/styles/global.css`**:
+  - Bound `html`, `body`, and `#root` with `overflow-x: hidden; max-width: 100%; width: 100%; position: relative;`.
+  - Added universal responsive constraints for media: `img, picture, svg, video, iframe, canvas { max-width: 100%; height: auto; }`.
+  - Added global text wrapping rules: `overflow-wrap: break-word; word-wrap: break-word;`.
+  - Replaced `white-space: nowrap` on buttons with `white-space: normal; word-break: break-word; max-width: 100%;`.
+  - Implemented the iOS 16px auto-zoom fix on mobile: `@media (max-width: 768px) { input, select, textarea, .form-input, .form-select, .form-textarea { font-size: 16px !important; } }`.
+- **`src/styles/tokens.css`**:
+  - Adjusted minimum container padding: `--container-padding: clamp(0.75rem, 3vw, 2rem)`.
+- **`src/styles/home.css`**:
+  - Header: Hidden `.btn-header-call` on mobile (`@media (max-width: 640px) { display: none; }`); gently scaled brand mark and text for screens < 480px.
+  - Hero: Full-width stacked action buttons on mobile (`@media (max-width: 640px)`).
+  - Shop by Vehicle: Single column on phones < 540px (`grid-template-columns: 1fr`); full-width stacked action buttons.
+  - Shop by Product: Added `flex-wrap: wrap` and vertical orientation on mobile for `.division-col`; stacked `.card-actions-footer` buttons on screens < 520px.
+  - Part Enquiry: Single column on phones < 580px for `.enquiry-tabs-bar`; full-width stacked journey buttons.
+  - Contact & Footer: Stacked storefront detail bar, map header, and footer fast-actions on screens < 640px.
+- **`src/styles/service-details.css`**:
+  - Stacked hero and form actions on screens < 640px.
+
+### 3. Verification & Build
+- `oxlint`: 0 warnings, 0 errors across 35 files.
+- `vite build`: Production build completed successfully in 11.45s with optimized CSS.
+
+---
+
 ## Remaining Business Information to be Confirmed with Client
 
 The website is fully functional, accurate, and completely grounded in verified storefront facts. To further enhance future iterations, the following operational details may be confirmed with the owner:

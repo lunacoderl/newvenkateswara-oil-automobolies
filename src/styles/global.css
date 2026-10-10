@@ -18,6 +18,9 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -25,7 +28,19 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   background-color: var(--color-light-neutral);
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Ensure padding on mobile so bottom contact bar does not cover content */
@@ -40,13 +55,27 @@ section[id] {
   scroll-margin-top: calc(var(--header-height) + 16px);
 }
 
-img, picture, svg {
+img, picture, svg, video, iframe, canvas {
   display: block;
   max-width: 100%;
 }
 
+/* Universal word breaking so long strings/part numbers never stretch viewport */
+p, span, h1, h2, h3, h4, h5, h6, a, button, label {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 input, button, textarea, select {
   font: inherit;
+}
+
+/* CRITICAL MOBILE FIX: Inputs with font-size < 16px trigger iOS auto-zoom */
+@media (max-width: 768px) {
+  input, select, textarea,
+  .form-input, .form-select, .form-textarea {
+    font-size: 16px !important;
+  }
 }
 
 a {
@@ -166,7 +195,9 @@ button {
   transition: all var(--transition-fast);
   cursor: pointer;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
   text-decoration: none;
 }
 

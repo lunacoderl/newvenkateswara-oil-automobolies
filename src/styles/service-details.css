@@ -105,6 +105,18 @@
   margin-bottom: var(--space-4);
 }
 
+@media (max-width: 640px) {
+  .service-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .service-hero-actions .btn-whatsapp,
+  .service-hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .service-hero-meta-note {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
@@ -415,6 +427,18 @@
   gap: var(--space-3);
   margin-top: var(--space-5);
   margin-bottom: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .form-actions-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-actions-row .btn-whatsapp,
+  .form-actions-row .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .form-disclaimer {
