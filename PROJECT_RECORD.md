@@ -455,6 +455,82 @@ User reported that on mobile devices, the site appeared "zoomed in" and required
 
 ---
 
+## Unique Automotive Glassmorphic Navbar, Skeleton Loaders & 60fps Scroll Reveal (2026-10-11)
+
+### 1. Requirements Addressed
+1. **Unique & Professional Navbar**: Create a distinctive, high-end automotive retail header with frosted glassmorphism, live counter status indicator, custom brand mark, and high-converting CTAs.
+2. **Skeleton Loading**: Implement shimmering skeleton loaders to eliminate Cumulative Layout Shift (CLS) and provide immediate visual feedback while images and components decode.
+3. **Lazy Loading Animations & Effects**: Add GPU-accelerated scroll reveal transitions (fade up, scale in, staggered reveals, hover card lift, and button shimmer beams).
+4. **Performance & Speed**: Zero bulky external animation libraries; pure CSS3 transitions and native `IntersectionObserver` for lightning-fast 60fps performance and instant page loads.
+
+### 2. Implementation Details
+
+#### Unique Automotive Glassmorphic Navbar (`Navbar.jsx` & `home.css`)
+- **Live Counter Status Strip (`.header-top-bar`)**:
+  - Displays live counter operating status with animated pulsing green dot (`.live-pulse-dot`).
+  - Highlights physical store address (`Plot No. 167, Auto Nagar, Nellore`) and authorized status (`Ashok Leyland Retail Parts Store · LEYPARTS`).
+  - Auto-collapses cleanly on scroll to maximize vertical screen real estate.
+- **Automotive Brand Emblem**:
+  - Custom SVG shield emblem featuring deep blue gradient, golden metallic stroke, and high-contrast `NV` monogram.
+  - Three-tier branding: `NEW VENKATESWARA` in crisp white, `OIL & AUTOMOBILES` in warm yellow, and `AUTO NAGAR · NELLORE`.
+- **Frosted Glassmorphism Header (`.site-header`)**:
+  - `backdrop-filter: blur(16px); background: rgba(11, 19, 31, 0.90);` seamlessly integrating with the full-screen hero banner.
+  - When scrolled, deepens to `rgba(8, 14, 23, 0.98)` with a 2px warm yellow glowing accent bottom border.
+- **High-Converting Header Actions**:
+  - Direct Phone Call CTA (`.btn-header-call`) with phone icon, live status subtitle, and light-beam hover shimmer (`.btn-shine-effect`).
+  - Direct WhatsApp button (`.btn-header-wa`) with green glow hover.
+- **Mobile Drawer Menu (`.mobile-drawer`)**:
+  - Re-themed in dark automotive glass (`#0E1624`) with live counter status banner, category navigation links with arrow chevrons, and full-width phone/WhatsApp buttons.
+
+#### Skeleton Loading System (`Skeleton.jsx` & `SmartImage.jsx`)
+- **`src/components/Skeleton.jsx`**:
+  - Modular, accessible skeleton loader supporting `rect`, `card`, `text`, `circle`, and `badge` variants.
+  - GPU-accelerated gradient shimmer animation (`@keyframes skeleton-shimmer`) with dark/light themes.
+- **Upgraded `src/components/SmartImage.jsx`**:
+  - Renders a shimmering skeleton until the image decodes.
+  - Progressive blur-to-sharp transition (`filter: blur(10px)` -> `filter: blur(0px)`, `opacity: 0` -> `1`) on `onLoad`.
+  - Enforces explicit aspect-ratio (zero layout shifts / zero CLS).
+
+#### 60fps Scroll Reveal & Micro-Interactions (`animations.css` & `useScrollReveal.js`)
+- **`src/styles/animations.css`**:
+  - Shimmer keyframes, live pulse keyframes, button shine beams (`.btn-shine-effect`), card elevation (`.hover-lift`), and staggered delay utilities (`.delay-50` to `.delay-500`).
+  - Automatic `prefers-reduced-motion` override for accessibility compliance.
+- **`src/hooks/useScrollReveal.js`**:
+  - High-performance React hook utilizing native `IntersectionObserver` with automatic disconnect after element entry.
+- **Connected Components**:
+  - `ShopByVehicle`: Header and vehicle tabs animate on scroll.
+  - `ShopByProduct`: Category cards feature `SmartImage` skeleton loaders, staggered reveal, and `.hover-lift`.
+  - `BrandShowcase`: Real inventory photos upgraded with `SmartImage` skeletons and cards with hover elevation.
+  - `AboutSection`: Facility and transport fleet photos upgraded with `SmartImage` skeletons and smooth reveal.
+  - `ContactSection`: Storefront photo with `SmartImage`, contact cards with `.hover-lift`, and map reveal.
+  - `PartEnquirySection`: Interactive journey tabs and forms animate in cleanly.
+
+### 3. File Modification Log
+- **Created Files**:
+  - `src/styles/animations.css` (Animation keyframes, shimmer, and reveal classes)
+  - `src/components/Skeleton.jsx` (Reusable skeleton loader component)
+  - `src/hooks/useScrollReveal.js` (Lightweight IntersectionObserver scroll reveal hook)
+- **Modified Files**:
+  - `src/components/Navbar.jsx` (Unique glassmorphic header with live counter status)
+  - `src/styles/home.css` (Upgraded header, top status bar, and mobile drawer styles)
+  - `src/styles/tokens.css` (Adjusted header height tokens)
+  - `src/styles/global.css` (Imported `animations.css`)
+  - `src/components/SmartImage.jsx` (Integrated Skeleton and blur-up loading animation)
+  - `src/components/ShopByVehicle.jsx` (Integrated scroll reveal animations)
+  - `src/components/ShopByProduct.jsx` (Integrated SmartImage skeletons and scroll reveal)
+  - `src/components/BrandShowcase.jsx` (Integrated SmartImage skeletons and scroll reveal)
+  - `src/components/AboutSection.jsx` (Integrated SmartImage skeletons and scroll reveal)
+  - `src/components/ContactSection.jsx` (Integrated SmartImage skeletons and scroll reveal)
+  - `src/components/PartEnquirySection.jsx` (Integrated scroll reveal)
+  - `PROJECT_RECORD.md` (Updated permanent audit record)
+- **Deleted Files**: None.
+
+### 4. Verification & QA
+- **Linter (`oxlint`)**: 0 warnings, 0 errors across 37 files (138ms).
+- **Vite Build (`npm run build`)**: Production build succeeded cleanly in 3.09s.
+
+---
+
 ## Remaining Business Information to be Confirmed with Client
 
 The website is fully functional, accurate, and completely grounded in verified storefront facts. To further enhance future iterations, the following operational details may be confirmed with the owner:
@@ -462,6 +538,7 @@ The website is fully functional, accurate, and completely grounded in verified s
 2. **Additional Transport Equipment Brands**: Confirmation if specific tractor brands (e.g. Mahindra, Swaraj) or commercial vehicle brands (e.g. Tata, BharatBenz) are stocked in addition to the prominent Ashok Leyland inventory.
 3. **Dedicated Landline or Secondary Mobile**: Whether an alternate telephone line exists in addition to the primary confirmed mobile (`9440529777`).
 4. **GST / Invoice Details**: Whether B2B tax invoice numbers or GSTIN should be displayed on commercial fleet enquiry documentation.
+
 
 
 

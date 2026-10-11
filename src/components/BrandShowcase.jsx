@@ -1,7 +1,10 @@
 import React from 'react';
 import { Info, Package, CheckCircle } from 'lucide-react';
+import SmartImage from './SmartImage';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function BrandShowcase() {
+  const sectionRef = useScrollReveal();
   const brandCategories = [
     {
       division: 'Commercial Vehicle Spare Parts',
@@ -66,10 +69,10 @@ export default function BrandShowcase() {
   ];
 
   return (
-    <section id="brands" className="brands-retail-section" aria-labelledby="brands-heading">
+    <section id="brands" ref={sectionRef} className="brands-retail-section" aria-labelledby="brands-heading">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header-block text-center">
+        <div className="section-header-block text-center reveal-fade-up">
           <div className="section-pill-tag">VERIFIED MANUFACTURER BRANDS</div>
           <h2 id="brands-heading" className="heading-section">
             Real Products &amp; Verified Brands
@@ -83,7 +86,7 @@ export default function BrandShowcase() {
         {/* Division Showcases with Real Photos */}
         <div className="division-showcases-wrapper">
           {brandCategories.map((group, gIdx) => (
-            <div key={gIdx} className="brand-group-block">
+            <div key={gIdx} className={`brand-group-block reveal-fade-up delay-${(gIdx + 1) * 100}`}>
               <div className="brand-group-header">
                 <span className="brand-group-tag">{group.badge}</span>
                 <h3 className="brand-group-title">{group.division}</h3>
@@ -91,15 +94,15 @@ export default function BrandShowcase() {
 
               <div className="brand-group-grid">
                 {/* Real Inventory Photo Card */}
-                <div className="brand-photo-card">
+                <div className="brand-photo-card hover-lift">
                   <div className="photo-media-box">
-                    <img
+                    <SmartImage
                       src={group.image}
                       alt={group.imageAlt}
+                      width={540}
+                      height={360}
+                      aspectRatio="16/10"
                       className="brand-real-photo"
-                      loading="lazy"
-                      width="540"
-                      height="360"
                     />
                   </div>
                   <div className="photo-label-banner">
@@ -111,7 +114,7 @@ export default function BrandShowcase() {
                 {/* Brands Grid */}
                 <div className="brands-cards-column">
                   {group.brands.map((brand, bIdx) => (
-                    <div key={bIdx} className="brand-retail-card">
+                    <div key={bIdx} className="brand-retail-card hover-lift">
                       <div className="brand-card-top-row">
                         <span className="brand-role-chip">{brand.role}</span>
                         <span className="brand-status-chip">

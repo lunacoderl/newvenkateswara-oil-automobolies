@@ -2,6 +2,7 @@
    Clean, Professional Automotive Retail Experience
 */
 @import './tokens.css';
+@import './animations.css';
 
 *, *::before, *::after {
   box-sizing: border-box;

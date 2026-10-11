@@ -1,27 +1,30 @@
 import React from 'react';
 import { MapPin, Phone, MessageSquare, Wrench, Fuel, CheckCircle2 } from 'lucide-react';
 import { BUSINESS, buildWhatsAppEnquiryUrl } from '../data/business';
+import SmartImage from './SmartImage';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function AboutSection() {
+  const sectionRef = useScrollReveal();
   const whatsappUrl = buildWhatsAppEnquiryUrl({
     category: 'About Store Enquiry',
     notes: 'Hello New Venkateswara Oil & Automobiles, I would like to visit your Auto Nagar store.',
   });
 
   return (
-    <section id="about" className="about-retail-section" aria-labelledby="about-heading">
+    <section id="about" ref={sectionRef} className="about-retail-section" aria-labelledby="about-heading">
       <div className="container">
         <div className="about-retail-grid">
           {/* Left Column: Real Imagery Composite */}
-          <div className="about-visual-column">
-            <div className="about-image-card-main">
-              <img
+          <div className="about-visual-column reveal-fade-up">
+            <div className="about-image-card-main hover-lift">
+              <SmartImage
                 src="/images/hero-bg.png"
                 alt="New Venkateswara Oil & Automobiles storefront and facility at Auto Nagar, Nellore"
+                width={640}
+                height={400}
+                aspectRatio="16/10"
                 className="about-img-main"
-                loading="lazy"
-                width="640"
-                height="400"
               />
               <div className="about-img-tag">
                 <MapPin size={16} aria-hidden="true" />
@@ -30,14 +33,14 @@ export default function AboutSection() {
             </div>
 
             {/* Inset Fleet Photo Card */}
-            <div className="about-image-card-fleet">
-              <img
+            <div className="about-image-card-fleet hover-lift">
+              <SmartImage
                 src="/images/transports.jpg"
                 alt="Commercial transport lorries and fleet trucks operating in Auto Nagar, Nellore"
+                width={340}
+                height={220}
+                aspectRatio="16/10"
                 className="about-img-fleet"
-                loading="lazy"
-                width="340"
-                height="220"
               />
               <div className="fleet-caption">
                 <strong>Commercial Transport Fleet Support</strong>
@@ -47,7 +50,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column: Factual Business Profile */}
-          <div className="about-text-column">
+          <div className="about-text-column reveal-fade-up delay-100">
             <div className="section-pill-tag">ABOUT OUR RETAIL STORE</div>
             
             <h2 id="about-heading" className="heading-section">

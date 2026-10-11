@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Bike, Car, Truck, Tractor, ArrowRight, MessageSquare, Phone } from 'lucide-react';
 import { BUSINESS, buildWhatsAppEnquiryUrl } from '../data/business';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function ShopByVehicle() {
   const [activeVehicle, setActiveVehicle] = useState('trucks');
+  const sectionRef = useScrollReveal();
 
   useEffect(() => {
     const handleHash = () => {
@@ -108,10 +110,10 @@ export default function ShopByVehicle() {
   ];
 
   return (
-    <section id="shop-by-vehicle" className="vehicle-section" aria-labelledby="vehicle-heading">
+    <section id="shop-by-vehicle" ref={sectionRef} className="vehicle-section" aria-labelledby="vehicle-heading">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header-block text-center">
+        <div className="section-header-block text-center reveal-fade-up">
           <div className="section-pill-tag">VEHICLE APPLICATION SELECTOR</div>
           <h2 id="vehicle-heading" className="heading-section">
             Shop by Vehicle Type
@@ -123,7 +125,7 @@ export default function ShopByVehicle() {
         </div>
 
         {/* Vehicle Segment Tabs */}
-        <div className="vehicle-tabs-nav" role="tablist" aria-label="Select vehicle category">
+        <div className="vehicle-tabs-nav reveal-fade-up delay-100" role="tablist" aria-label="Select vehicle category">
           {vehicleCategories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeVehicle === cat.id;

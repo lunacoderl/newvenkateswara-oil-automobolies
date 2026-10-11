@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Camera, Search, HelpCircle, Users, MessageSquare, Phone } from 'lucide-react';
 import { BUSINESS, buildWhatsAppEnquiryUrl } from '../data/business';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function PartEnquirySection() {
   const [activeTab, setActiveTab] = useState('part-number');
+  const sectionRef = useScrollReveal();
 
   // Form states for Journey 1: Part Number
   const [partNumber, setPartNumber] = useState('');
@@ -54,10 +56,10 @@ export default function PartEnquirySection() {
   };
 
   return (
-    <section id="part-enquiry" className="enquiry-retail-section" aria-labelledby="enquiry-heading">
+    <section id="part-enquiry" ref={sectionRef} className="enquiry-retail-section" aria-labelledby="enquiry-heading">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header-block text-center">
+        <div className="section-header-block text-center reveal-fade-up">
           <div className="section-pill-tag">ASSISTED COUNTER ENQUIRY</div>
           <h2 id="enquiry-heading" className="heading-section">
             Part Identification &amp; WhatsApp Enquiry
@@ -69,7 +71,7 @@ export default function PartEnquirySection() {
         </div>
 
         {/* 4 Customer Journey Tabs */}
-        <div className="enquiry-tabs-bar" role="tablist" aria-label="Customer enquiry scenarios">
+        <div className="enquiry-tabs-bar reveal-fade-up delay-100" role="tablist" aria-label="Customer enquiry scenarios">
           <button
             role="tab"
             id="tab-part-number"

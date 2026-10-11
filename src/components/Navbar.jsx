@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Menu, X, ArrowUpRight, MessageSquare } from 'lucide-react';
+import { Phone, Menu, X, ArrowUpRight, MessageSquare, MapPin, ShieldCheck } from 'lucide-react';
 import { BUSINESS, buildWhatsAppEnquiryUrl } from '../data/business';
 
 export default function Navbar() {
@@ -11,7 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 25) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -65,8 +65,8 @@ export default function Navbar() {
   };
 
   const whatsappQuickUrl = buildWhatsAppEnquiryUrl({
-    category: 'Header Quick Enquiry',
-    notes: 'Hello New Venkateswara Oil & Automobiles, I would like to check product availability.',
+    category: 'Navbar Quick Connect',
+    notes: 'Hello New Venkateswara Oil & Automobiles, I would like to check availability for parts / lubricants.',
   });
 
   return (
@@ -74,80 +74,142 @@ export default function Navbar() {
       className={`site-header ${isScrolled ? 'scrolled' : ''}`}
       role="banner"
     >
-      <div className="container header-container">
-        {/* Brand Logo & Name */}
-        <Link
-          to="/"
-          className="brand-logo-link"
-          aria-label={`${BUSINESS.name} - Home`}
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          <div className="brand-badge-symbol">
-            <span className="symbol-letter">NV</span>
-          </div>
-          <div className="brand-text-block">
-            <span className="brand-name">NEW VENKATESWARA</span>
-            <span className="brand-sub">OIL &amp; AUTOMOBILES</span>
-            <span className="brand-loc">AUTO NAGAR · NELLORE</span>
-          </div>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="desktop-nav" aria-label="Main Navigation">
-          <ul className="nav-list">
-            {navLinks.map((item) => (
-              <li key={item.label} className="nav-item">
-                {item.to.startsWith('#') && isHomePage ? (
-                  <a
-                    href={item.to}
-                    className="nav-link"
-                    onClick={(e) => handleLinkClick(e, item.to)}
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    to={item.to}
-                    className="nav-link"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Desktop Quick Header Actions */}
-        <div className="header-actions">
-          <a
-            href={BUSINESS.phoneHref}
-            className="btn-header-call"
-            aria-label={`Call New Venkateswara Oil & Automobiles directly at ${BUSINESS.phone}`}
-          >
-            <Phone size={16} aria-hidden="true" />
-            <span className="call-text">
-              <span className="call-sub">Call Counter</span>
-              <span className="call-num">{BUSINESS.phone}</span>
+      {/* Top Status & Verification Strip */}
+      <div className="header-top-bar" aria-label="Store counter operating status and location">
+        <div className="container top-bar-container">
+          <div className="top-bar-left">
+            <span className="live-status-chip">
+              <span className="live-pulse-dot" aria-hidden="true" />
+              <span>Counter Open · In-Store &amp; Delivery Enquiries</span>
             </span>
-          </a>
+            <span className="top-bar-divider" aria-hidden="true">•</span>
+            <span className="top-bar-auth">
+              <ShieldCheck size={14} className="top-icon" aria-hidden="true" />
+              <span>Ashok Leyland Retail Parts Store · LEYPARTS</span>
+            </span>
+          </div>
 
-          {/* Mobile Hamburger Toggle Button */}
-          <button
-            type="button"
-            className="mobile-menu-toggle"
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-drawer"
-            aria-label={isMobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          <div className="top-bar-right">
+            <span className="top-bar-loc">
+              <MapPin size={13} className="top-icon" aria-hidden="true" />
+              <span>Plot No. 167, Auto Nagar, Nellore</span>
+            </span>
+            <span className="top-bar-divider" aria-hidden="true">•</span>
+            <a href={BUSINESS.phoneHref} className="top-bar-link" aria-label={`Call ${BUSINESS.phone}`}>
+              <Phone size={13} className="top-icon" aria-hidden="true" />
+              <span>{BUSINESS.phone}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Glassmorphic Navigation Bar */}
+      <div className="header-main-bar">
+        <div className="container header-container">
+          {/* Brand Identity with Automotive Emblem */}
+          <Link
+            to="/"
+            className="brand-logo-link"
+            aria-label={`${BUSINESS.name} - Home`}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
-            {isMobileMenuOpen ? (
-              <X size={26} aria-hidden="true" />
-            ) : (
-              <Menu size={26} aria-hidden="true" />
-            )}
-          </button>
+            <div className="brand-badge-symbol" aria-hidden="true">
+              <svg viewBox="0 0 44 44" width="44" height="44" className="brand-emblem-svg">
+                <defs>
+                  <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#164DAA" />
+                    <stop offset="100%" stopColor="#0D2E68" />
+                  </linearGradient>
+                  <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#FFDE6A" />
+                    <stop offset="100%" stopColor="#F6B817" />
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="40" height="40" rx="10" fill="url(#badgeGrad)" stroke="url(#goldGrad)" strokeWidth="2.5" />
+                <circle cx="22" cy="22" r="14" fill="none" stroke="rgba(246, 184, 23, 0.35)" strokeWidth="1" strokeDasharray="3 3" />
+                <text x="22" y="27" textAnchor="middle" fill="#FFFFFF" fontSize="15" fontWeight="900" fontFamily="inherit" letterSpacing="0.5">NV</text>
+              </svg>
+            </div>
+            <div className="brand-text-block">
+              <span className="brand-name">NEW VENKATESWARA</span>
+              <span className="brand-sub">OIL &amp; AUTOMOBILES</span>
+              <span className="brand-loc">AUTO NAGAR · NELLORE</span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <nav className="desktop-nav" aria-label="Main Navigation">
+            <ul className="nav-list">
+              {navLinks.map((item) => (
+                <li key={item.label} className="nav-item">
+                  {item.to.startsWith('#') && isHomePage ? (
+                    <a
+                      href={item.to}
+                      className="nav-link"
+                      onClick={(e) => handleLinkClick(e, item.to)}
+                    >
+                      <span>{item.label}</span>
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.to}
+                      className="nav-link"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span>{item.label}</span>
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Header Action Buttons */}
+          <div className="header-actions">
+            {/* Quick WhatsApp Button */}
+            <a
+              href={whatsappQuickUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-header-wa"
+              aria-label="Enquire via WhatsApp"
+              title="Chat on WhatsApp"
+            >
+              <MessageSquare size={16} aria-hidden="true" />
+              <span className="wa-label">WhatsApp</span>
+            </a>
+
+            {/* Direct Phone Call Button */}
+            <a
+              href={BUSINESS.phoneHref}
+              className="btn-header-call btn-shine-effect"
+              aria-label={`Call New Venkateswara Oil & Automobiles directly at ${BUSINESS.phone}`}
+            >
+              <Phone size={16} className="call-phone-icon" aria-hidden="true" />
+              <div className="call-text">
+                <span className="call-sub">Call Store</span>
+                <span className="call-num">{BUSINESS.phone}</span>
+              </div>
+            </a>
+
+            {/* Mobile Hamburger Toggle Button */}
+            <button
+              type="button"
+              className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-drawer"
+              aria-label={isMobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <span className="toggle-icon-wrap">
+                {isMobileMenuOpen ? (
+                  <X size={24} aria-hidden="true" />
+                ) : (
+                  <Menu size={24} aria-hidden="true" />
+                )}
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -171,8 +233,14 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
             aria-label="Close navigation menu"
           >
-            <X size={24} aria-hidden="true" />
+            <X size={22} aria-hidden="true" />
           </button>
+        </div>
+
+        {/* Live Operating Status in Drawer */}
+        <div className="drawer-status-bar">
+          <span className="live-pulse-dot" aria-hidden="true" />
+          <span>Counter Open · In-Store Assistance &amp; Orders</span>
         </div>
 
         <nav className="mobile-nav" aria-label="Mobile Navigation">
@@ -184,6 +252,7 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <span>Home Page</span>
+                <ArrowUpRight size={16} aria-hidden="true" />
               </Link>
             </li>
             {navLinks.map((item) => (
@@ -212,20 +281,19 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* Mobile Drawer Direct Contact Buttons */}
+        {/* Mobile Drawer Direct Contact Actions */}
         <div className="mobile-drawer-footer">
           <div className="drawer-divisions-note">
-            <strong>Two Core Divisions:</strong>
-            <p>1. Ashok Leyland Commercial Vehicle Spare Parts</p>
-            <p>2. Automotive Oils &amp; Lubricants (Gulf, Veedol, MAK, Eni)</p>
+            <strong>Authorized Ashok Leyland Store</strong>
+            <p>Commercial vehicle spare parts (LEYPARTS) &amp; lubricants (Gulf, Veedol, MAK, Eni)</p>
           </div>
 
           <a
             href={BUSINESS.phoneHref}
-            className="btn-primary mobile-drawer-call-btn"
+            className="btn-primary mobile-drawer-call-btn btn-shine-effect"
           >
             <Phone size={18} aria-hidden="true" />
-            <span>Call: {BUSINESS.phone}</span>
+            <span>Call Now: {BUSINESS.phone}</span>
           </a>
 
           <a

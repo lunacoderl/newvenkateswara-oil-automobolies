@@ -1,18 +1,21 @@
 import React from 'react';
 import { Phone, MessageSquare, MapPin, Navigation, Clock, ExternalLink, ShieldCheck } from 'lucide-react';
 import { BUSINESS, buildWhatsAppEnquiryUrl } from '../data/business';
+import SmartImage from './SmartImage';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function ContactSection() {
+  const sectionRef = useScrollReveal();
   const whatsappUrl = buildWhatsAppEnquiryUrl({
     category: 'Store Visit / Location Enquiry',
     notes: 'Hello New Venkateswara Oil & Automobiles, I am visiting your store at Auto Nagar, Nellore.',
   });
 
   return (
-    <section id="contact" className="contact-retail-section" aria-labelledby="contact-heading">
+    <section id="contact" ref={sectionRef} className="contact-retail-section" aria-labelledby="contact-heading">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header-block text-center">
+        <div className="section-header-block text-center reveal-fade-up">
           <div className="section-pill-tag">VISIT OUR STORE</div>
           <h2 id="contact-heading" className="heading-section">
             Store Location &amp; Contact Details
@@ -24,17 +27,17 @@ export default function ContactSection() {
         </div>
 
         {/* Real Store Photo & Essential Info Header Grid */}
-        <div className="contact-main-grid">
+        <div className="contact-main-grid reveal-fade-up delay-100">
           {/* Left Column: Real Store Photo Card */}
-          <div className="contact-storefront-card">
+          <div className="contact-storefront-card hover-lift">
             <div className="storefront-media-box">
-              <img
+              <SmartImage
                 src="/images/hero-bg.png"
                 alt="New Venkateswara Oil & Automobiles storefront and facility at Plot 167, Auto Nagar, Nellore"
+                width={600}
+                height={380}
+                aspectRatio="16/10"
                 className="storefront-real-img"
-                loading="lazy"
-                width="600"
-                height="380"
               />
               <div className="storefront-photo-overlay">
                 <div className="overlay-badge">
@@ -65,7 +68,7 @@ export default function ContactSection() {
           {/* Right Column: Key Details & Direct Action Cards */}
           <div className="contact-details-cards-col">
             {/* Address Card */}
-            <div className="contact-card-item">
+            <div className="contact-card-item hover-lift">
               <div className="card-icon-circle">
                 <MapPin size={22} aria-hidden="true" />
               </div>
@@ -88,7 +91,7 @@ export default function ContactSection() {
             </div>
 
             {/* Direct Phone Card */}
-            <div className="contact-card-item">
+            <div className="contact-card-item hover-lift">
               <div className="card-icon-circle blue-circle">
                 <Phone size={22} aria-hidden="true" />
               </div>
@@ -102,7 +105,7 @@ export default function ContactSection() {
             </div>
 
             {/* Direct WhatsApp Card */}
-            <div className="contact-card-item">
+            <div className="contact-card-item hover-lift">
               <div className="card-icon-circle green-circle">
                 <MessageSquare size={22} aria-hidden="true" />
               </div>
@@ -121,7 +124,7 @@ export default function ContactSection() {
             </div>
 
             {/* Counter Schedule Card */}
-            <div className="contact-card-item">
+            <div className="contact-card-item hover-lift">
               <div className="card-icon-circle">
                 <Clock size={22} aria-hidden="true" />
               </div>
@@ -137,7 +140,7 @@ export default function ContactSection() {
         </div>
 
         {/* Embedded Interactive Map Container */}
-        <div className="contact-map-wrapper">
+        <div className="contact-map-wrapper reveal-fade-up delay-200">
           <div className="map-header-bar">
             <div className="map-title-row">
               <Navigation size={18} aria-hidden="true" />

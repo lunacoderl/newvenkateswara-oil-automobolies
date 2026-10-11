@@ -67,7 +67,8 @@
   --container-max: 1200px;
   --container-narrow: 840px;
   --container-padding: clamp(0.75rem, 3vw, 2rem);
-  --header-height: 72px;
+  --header-height: 68px;
+  --header-total-height: 102px;
   --mobile-bottom-bar-height: 64px;
 
   /* Radii & Borders */

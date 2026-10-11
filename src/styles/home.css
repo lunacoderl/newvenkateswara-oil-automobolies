@@ -7,23 +7,127 @@
 @import './tokens.css';
 
 /* ==========================================================================
-   1. Header & Navigation (Clean White Retail Header)
+   1. Header & Navigation (Unique Automotive Glassmorphism Design)
    ========================================================================== */
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: var(--header-height);
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-neutral-border);
   z-index: var(--z-header);
-  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+  background: rgba(11, 19, 31, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
 }
 
 .site-header.scrolled {
-  box-shadow: 0 2px 12px rgba(16, 24, 32, 0.08);
-  border-bottom-color: var(--color-neutral-border-hover);
+  background: rgba(8, 14, 23, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 2px solid var(--color-warm-yellow);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Top Verification & Counter Status Strip
+   -------------------------------------------------------------------------- */
+.header-top-bar {
+  background: rgba(6, 11, 18, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  max-height: 34px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  font-size: 0.725rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.site-header.scrolled .header-top-bar {
+  max-height: 0;
+  opacity: 0;
+  border-bottom-color: transparent;
+}
+
+.top-bar-container {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.live-status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.top-bar-auth {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.top-icon {
+  color: var(--color-warm-yellow);
+  flex-shrink: 0;
+}
+
+.top-bar-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.65rem;
+}
+
+.top-bar-loc {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.top-bar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-warm-yellow);
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+.top-bar-link:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 900px) {
+  .top-bar-auth,
+  .top-bar-loc,
+  .top-bar-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-top-bar {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Main Navigation Bar
+   -------------------------------------------------------------------------- */
+.header-main-bar {
+  height: 68px;
 }
 
 .header-container {
@@ -34,30 +138,31 @@
   gap: var(--space-4);
 }
 
-/* Brand Identity */
+/* Automotive Brand Identity */
 .brand-logo-link {
   display: flex;
   align-items: center;
   gap: var(--space-3);
   text-decoration: none;
   flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo-link:hover {
+  transform: translateY(-1px);
 }
 
 .brand-badge-symbol {
   width: 44px;
   height: 44px;
-  background-color: var(--color-deep-blue);
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 900;
-  border-radius: var(--radius-md);
-  border: 2px solid var(--color-warm-yellow);
-  box-shadow: 0 2px 6px rgba(22, 77, 170, 0.25);
   flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(246, 184, 23, 0.25));
+}
+
+.brand-emblem-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .brand-text-block {
@@ -69,17 +174,16 @@
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 900;
-  color: var(--color-graphite);
+  color: #FFFFFF;
   line-height: 1.1;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .brand-sub {
   font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-deep-blue);
+  font-size: 0.725rem;
+  font-weight: 800;
+  color: var(--color-warm-yellow);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -87,8 +191,8 @@
 .brand-loc {
   font-size: 0.625rem;
   font-weight: 600;
-  color: var(--color-text-muted);
-  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -99,20 +203,19 @@
   .brand-badge-symbol {
     width: 38px;
     height: 38px;
-    font-size: 1.15rem;
   }
   .brand-name {
     font-size: 0.95rem;
   }
   .brand-sub {
-    font-size: 0.6rem;
+    font-size: 0.625rem;
   }
   .brand-loc {
     font-size: 0.55rem;
   }
 }
 
-/* Desktop Nav */
+/* Desktop Navigation List */
 .desktop-nav {
   display: none;
 }
@@ -126,48 +229,101 @@
 .nav-list {
   display: flex;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-2);
   list-style: none;
 }
 
 .nav-link {
-  font-size: var(--text-sm);
+  font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-text-secondary);
-  padding: var(--space-2) var(--space-1);
-  border-radius: var(--radius-sm);
-  transition: color var(--transition-fast);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
   white-space: nowrap;
+  position: relative;
 }
 
 .nav-link:hover {
-  color: var(--color-deep-blue);
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
 }
 
-/* Header Action Call Button */
+.nav-link:active {
+  transform: scale(0.98);
+}
+
+/* Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
   gap: var(--space-3);
 }
 
+/* Quick WhatsApp Pill */
+.btn-header-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background-color: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  color: #25D366;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-header-wa:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 0 16px rgba(37, 211, 102, 0.4);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .btn-header-wa .wa-label {
+    display: none;
+  }
+  .btn-header-wa {
+    padding: 8px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-header-wa {
+    display: none;
+  }
+}
+
+/* Direct Phone Call Button */
 .btn-header-call {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background-color: var(--color-light-neutral);
-  border: 1px solid var(--color-neutral-border);
-  color: var(--color-deep-blue);
-  padding: 6px 14px;
+  background: linear-gradient(135deg, #F6B817 0%, #E2A60C 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #101820;
+  padding: 7px 16px;
   border-radius: var(--radius-full);
-  font-weight: 700;
+  font-weight: 800;
+  box-shadow: 0 3px 12px rgba(246, 184, 23, 0.35);
   transition: all var(--transition-fast);
 }
 
 .btn-header-call:hover {
-  background-color: var(--color-deep-blue);
-  border-color: var(--color-deep-blue);
-  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(246, 184, 23, 0.55);
+  filter: brightness(1.05);
+}
+
+.call-phone-icon {
+  color: #101820;
 }
 
 .call-text {
@@ -178,16 +334,16 @@
 
 .call-sub {
   font-size: 0.65rem;
-  color: var(--color-text-muted);
+  color: rgba(16, 24, 32, 0.75);
   text-transform: uppercase;
-}
-
-.btn-header-call:hover .call-sub {
-  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .call-num {
-  font-size: var(--text-sm);
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 640px) {
@@ -203,9 +359,22 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: var(--color-graphite);
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-neutral-border);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all var(--transition-fast);
+}
+
+.mobile-menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-warm-yellow);
+}
+
+.mobile-menu-toggle.active {
+  background-color: rgba(246, 184, 23, 0.15);
+  border-color: var(--color-warm-yellow);
+  color: var(--color-warm-yellow);
 }
 
 @media (min-width: 1024px) {
@@ -214,7 +383,9 @@
   }
 }
 
-/* Mobile Drawer */
+/* --------------------------------------------------------------------------
+   Mobile Drawer Menu (Automotive Dark Glass Theme)
+   -------------------------------------------------------------------------- */
 .mobile-drawer {
   position: fixed;
   top: 0;
@@ -222,10 +393,11 @@
   width: 320px;
   max-width: 85vw;
   height: 100vh;
-  background-color: var(--color-white);
-  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  background-color: #0E1624;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.6);
   z-index: var(--z-drawer);
-  transition: right var(--transition-normal);
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -238,9 +410,16 @@
 .mobile-drawer-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(16, 24, 32, 0.5);
-  backdrop-filter: blur(2px);
+  background-color: rgba(6, 11, 18, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: calc(var(--z-drawer) - 1);
+  animation: drawer-fade-in 0.25s ease;
+}
+
+@keyframes drawer-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .mobile-drawer-header {
@@ -248,7 +427,8 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-4) var(--space-5);
-  border-bottom: 1px solid var(--color-neutral-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(6, 11, 18, 0.5);
 }
 
 .drawer-brand {
@@ -258,15 +438,16 @@
 }
 
 .drawer-badge {
-  width: 32px;
-  height: 32px;
-  background-color: var(--color-deep-blue);
-  color: var(--color-white);
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #164DAA 0%, #0D2E68 100%);
+  border: 1.5px solid var(--color-warm-yellow);
+  color: #FFFFFF;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 0.85rem;
 }
 
@@ -274,23 +455,45 @@
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 0.95rem;
-  color: var(--color-graphite);
+  color: #FFFFFF;
   display: block;
 }
 
 .drawer-brand-sub {
-  font-size: 0.7rem;
-  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  color: var(--color-warm-yellow);
+  font-weight: 600;
   display: block;
+  text-transform: uppercase;
 }
 
 .drawer-close-btn {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.drawer-close-btn:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.drawer-status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px var(--space-5);
+  background-color: rgba(34, 197, 94, 0.08);
+  border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+  font-size: 0.725rem;
+  color: #86EFAC;
+  font-weight: 600;
 }
 
 .mobile-nav {
@@ -302,51 +505,55 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 .mobile-nav-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-3) var(--space-2);
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
   font-size: var(--text-base);
   font-weight: 600;
-  color: var(--color-text-primary);
-  border-bottom: 1px solid var(--color-light-neutral);
-  transition: color var(--transition-fast);
+  color: rgba(255, 255, 255, 0.85);
+  transition: all var(--transition-fast);
 }
 
-.mobile-nav-link:hover {
-  color: var(--color-deep-blue);
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-warm-yellow);
+  padding-left: 18px;
 }
 
 .mobile-drawer-footer {
   padding: var(--space-5);
-  background-color: var(--color-light-neutral);
-  border-top: 1px solid var(--color-neutral-border);
+  background-color: rgba(6, 11, 18, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
 }
 
 .drawer-divisions-note {
-  font-size: 0.75rem;
-  color: var(--color-text-secondary);
+  font-size: 0.725rem;
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.4;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .drawer-divisions-note strong {
-  color: var(--color-graphite);
+  color: #FFFFFF;
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .mobile-drawer-call-btn,
 .mobile-drawer-whatsapp-btn {
   width: 100%;
   justify-content: center;
+  min-height: 48px;
 }
 
 
@@ -356,11 +563,17 @@
 .hero-fullscreen-section {
   position: relative;
   width: 100%;
-  padding-top: var(--header-height);
+  padding-top: var(--header-total-height, 102px);
   background-color: #0b131f;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .hero-fullscreen-section {
+    padding-top: var(--header-height, 68px);
+  }
 }
 
 .hero-banner-wrapper {

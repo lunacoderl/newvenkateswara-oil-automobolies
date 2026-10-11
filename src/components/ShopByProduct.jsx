@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cog, Droplets, Gauge, ShieldAlert, Disc, ArrowRight, MessageSquare, Phone } from 'lucide-react';
 import { BUSINESS, buildWhatsAppEnquiryUrl } from '../data/business';
+import SmartImage from './SmartImage';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function ShopByProduct() {
+  const sectionRef = useScrollReveal();
   const categories = [
     {
       slug: 'commercial-vehicle-spare-parts',
@@ -78,10 +81,10 @@ export default function ShopByProduct() {
   ];
 
   return (
-    <section id="shop-by-product" className="product-section" aria-labelledby="product-heading">
+    <section id="shop-by-product" ref={sectionRef} className="product-section" aria-labelledby="product-heading">
       <div className="container">
         {/* Section Header */}
-        <div className="section-header-block text-center">
+        <div className="section-header-block text-center reveal-fade-up">
           <div className="section-pill-tag">VERIFIED PRODUCT CATEGORIES</div>
           <h2 id="product-heading" className="heading-section">
             Shop by Product Category
@@ -93,7 +96,7 @@ export default function ShopByProduct() {
         </div>
 
         {/* Divisions Highlight Banner */}
-        <div className="divisions-balance-bar">
+        <div className="divisions-balance-bar reveal-fade-up delay-100">
           <div className="division-col spare-parts-col">
             <span className="division-indicator-dot spare-parts-dot"></span>
             <strong>Division 1: Commercial Vehicle Spare Parts</strong>
@@ -109,7 +112,7 @@ export default function ShopByProduct() {
 
         {/* Category Cards Grid */}
         <div className="categories-grid">
-          {categories.map((cat) => {
+          {categories.map((cat, idx) => {
             const Icon = cat.icon;
             const whatsappUrl = buildWhatsAppEnquiryUrl({
               category: cat.title,
@@ -120,17 +123,17 @@ export default function ShopByProduct() {
             return (
               <article
                 key={cat.slug}
-                className={`category-retail-card ${cat.isSpareParts ? 'spare-parts-featured-card' : ''}`}
+                className={`category-retail-card hover-lift reveal-fade-up delay-${(idx + 1) * 50} ${cat.isSpareParts ? 'spare-parts-featured-card' : ''}`}
               >
                 {/* Visual Header with Real Image */}
                 <div className="card-media-wrapper">
-                  <img
+                  <SmartImage
                     src={cat.image}
                     alt={cat.imageAlt}
+                    width={400}
+                    height={240}
+                    aspectRatio="16/10"
                     className="card-media-img"
-                    loading="lazy"
-                    width="400"
-                    height="240"
                   />
                   <div className="card-badge-overlay">
                     <span className="card-badge">{cat.badge}</span>
