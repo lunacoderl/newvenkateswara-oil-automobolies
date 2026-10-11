@@ -50,7 +50,7 @@ export default function Navbar() {
     { label: 'Verified Brands', shortLabel: 'Brands', to: isHomePage ? '#brands' : '/#brands' },
     { label: 'Part Enquiry', shortLabel: 'Enquiry', to: isHomePage ? '#part-enquiry' : '/#part-enquiry' },
     { label: 'About Store', shortLabel: 'About', to: isHomePage ? '#about' : '/#about' },
-    { label: 'Location & Contact', shortLabel: 'Contact', to: isHomePage ? '#contact' : '/#contact' },
+    { label: 'Contact', shortLabel: 'Contact', to: isHomePage ? '#contact' : '/#contact' },
   ];
 
   const handleLinkClick = (e, to) => {
