@@ -584,6 +584,29 @@ User reported that on mobile devices, the site appeared "zoomed in" and required
 
 ---
 
+## GitHub Repository Migration — newvenkateswara-oil-automobolies (2026-10-11)
+
+### 1. Requirements Addressed
+- Target Remote: `https://github.com/lunacoderl/newvenkateswara-oil-automobolies.git`
+- Header: `# newvenkateswara-oil-automobolies` in `README.md`
+- Tracked deployment configs: `vercel.json` (SPA routing & immutable asset caching) and `.gitignore` (excluding node_modules and build artifacts)
+- Initial push to collaborator repository on branch `main`.
+
+### 2. Implementation Details
+- Updated `README.md` to reference `newvenkateswara-oil-automobolies`.
+- Verified `.gitignore` and `vercel.json` are present in repository root.
+- Reconfigured git remote `origin` to `https://github.com/lunacoderl/newvenkateswara-oil-automobolies.git`.
+- Pushed all production source code, assets, and documentation to the new repository.
+
+### 3. File Modification Log
+- **Modified Files**:
+  - `README.md`: Updated title and repository folder structure.
+  - `PROJECT_RECORD.md`: Updated audit log.
+- **Created Files**: None.
+- **Deleted Files**: None.
+
+---
+
 ## Remaining Business Information to be Confirmed with Client
 
 The website is fully functional, accurate, and completely grounded in verified storefront facts. To further enhance future iterations, the following operational details may be confirmed with the owner:

@@ -1,4 +1,4 @@
-# venkateswara-oil-lubricants
+# newvenkateswara-oil-automobolies
 
 > **New Venkateswara Oil & Automobiles** — Official website for the automotive retail enterprise in Auto Nagar, Nellore, Andhra Pradesh.
 
@@ -30,7 +30,7 @@
 ## 📁 Repository Structure
 
 ```
-venkateswara-oil-lubricants/
+newvenkateswara-oil-automobolies/
 ├── public/
 │   ├── favicon.svg             # Brand favicon (gear cog + oil droplet)
 │   ├── robots.txt              # Search engine crawler instructions
