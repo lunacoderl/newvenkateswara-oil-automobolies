@@ -45,12 +45,12 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { label: 'Shop by Vehicle', to: isHomePage ? '#shop-by-vehicle' : '/#shop-by-vehicle' },
-    { label: 'Products & Spares', to: isHomePage ? '#shop-by-product' : '/#shop-by-product' },
-    { label: 'Verified Brands', to: isHomePage ? '#brands' : '/#brands' },
-    { label: 'Part Enquiry', to: isHomePage ? '#part-enquiry' : '/#part-enquiry' },
-    { label: 'About Store', to: isHomePage ? '#about' : '/#about' },
-    { label: 'Location & Contact', to: isHomePage ? '#contact' : '/#contact' },
+    { label: 'Shop by Vehicle', shortLabel: 'Vehicle', to: isHomePage ? '#shop-by-vehicle' : '/#shop-by-vehicle' },
+    { label: 'Products & Spares', shortLabel: 'Products', to: isHomePage ? '#shop-by-product' : '/#shop-by-product' },
+    { label: 'Verified Brands', shortLabel: 'Brands', to: isHomePage ? '#brands' : '/#brands' },
+    { label: 'Part Enquiry', shortLabel: 'Enquiry', to: isHomePage ? '#part-enquiry' : '/#part-enquiry' },
+    { label: 'About Store', shortLabel: 'About', to: isHomePage ? '#about' : '/#about' },
+    { label: 'Location & Contact', shortLabel: 'Contact', to: isHomePage ? '#contact' : '/#contact' },
   ];
 
   const handleLinkClick = (e, to) => {
@@ -76,7 +76,7 @@ export default function Navbar() {
     >
       {/* Top Status & Verification Strip */}
       <div className="header-top-bar" aria-label="Store counter operating status and location">
-        <div className="container top-bar-container">
+        <div className="top-bar-container">
           <div className="top-bar-left">
             <span className="live-status-chip">
               <span className="live-pulse-dot" aria-hidden="true" />
@@ -103,9 +103,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Main Glassmorphic Navigation Bar */}
+      {/* Main Colorful Automotive Navigation Bar */}
       <div className="header-main-bar">
-        <div className="container header-container">
+        <div className="header-container">
           {/* Brand Identity with Automotive Emblem */}
           <Link
             to="/"
@@ -148,7 +148,8 @@ export default function Navbar() {
                       className="nav-link"
                       onClick={(e) => handleLinkClick(e, item.to)}
                     >
-                      <span>{item.label}</span>
+                      <span className="nav-label-full">{item.label}</span>
+                      <span className="nav-label-short" aria-hidden="true">{item.shortLabel}</span>
                     </a>
                   ) : (
                     <Link
@@ -156,7 +157,8 @@ export default function Navbar() {
                       className="nav-link"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <span>{item.label}</span>
+                      <span className="nav-label-full">{item.label}</span>
+                      <span className="nav-label-short" aria-hidden="true">{item.shortLabel}</span>
                     </Link>
                   )}
                 </li>
@@ -190,6 +192,7 @@ export default function Navbar() {
                 <span className="call-sub">Call Store</span>
                 <span className="call-num">{BUSINESS.phone}</span>
               </div>
+              <span className="call-text-compact">Call {BUSINESS.phone}</span>
             </a>
 
             {/* Mobile Hamburger Toggle Button */}

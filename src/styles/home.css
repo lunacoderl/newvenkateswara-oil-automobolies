@@ -7,7 +7,7 @@
 @import './tokens.css';
 
 /* ==========================================================================
-   1. Header & Navigation (Unique Automotive Glassmorphism Design)
+   1. Header & Navigation (Vibrant, Colorful Automotive Retail Design)
    ========================================================================== */
 .site-header {
   position: fixed;
@@ -15,34 +15,33 @@
   left: 0;
   right: 0;
   z-index: var(--z-header);
-  background: rgba(11, 19, 31, 0.9);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 3px solid var(--color-deep-blue, #164DAA);
+  box-shadow: 0 4px 20px rgba(22, 77, 170, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.3s ease;
 }
 
 .site-header.scrolled {
-  background: rgba(8, 14, 23, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 2px solid var(--color-warm-yellow);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.99);
+  border-bottom: 3px solid var(--color-warm-yellow, #F6B817);
+  box-shadow: 0 8px 30px rgba(22, 77, 170, 0.14), 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* --------------------------------------------------------------------------
-   Top Verification & Counter Status Strip
+   Top Verification & Counter Status Strip (Vibrant Royal Blue Gradient)
    -------------------------------------------------------------------------- */
 .header-top-bar {
-  background: rgba(6, 11, 18, 0.75);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(90deg, #164DAA 0%, #1A54BD 50%, #0F3B84 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   max-height: 34px;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
   font-size: 0.725rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
 }
 
 .site-header.scrolled .header-top-bar {
@@ -52,6 +51,10 @@
 }
 
 .top-bar-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(0.75rem, 2vw, 2rem);
   height: 34px;
   display: flex;
   align-items: center;
@@ -69,24 +72,29 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
   color: #FFFFFF;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .top-bar-auth {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #FFDE6A;
+  font-weight: 600;
 }
 
 .top-icon {
-  color: var(--color-warm-yellow);
+  color: #FFDE6A;
   flex-shrink: 0;
 }
 
 .top-bar-divider {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.35);
   font-size: 0.65rem;
 }
 
@@ -94,22 +102,25 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .top-bar-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: var(--color-warm-yellow);
-  font-weight: 700;
+  color: #FFDE6A;
+  font-weight: 800;
+  text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .top-bar-link:hover {
   color: #FFFFFF;
+  text-decoration: underline;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .top-bar-auth,
   .top-bar-loc,
   .top-bar-divider {
@@ -132,17 +143,21 @@
 
 .header-container {
   height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(0.75rem, 2vw, 2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
+  gap: clamp(8px, 1.2vw, 20px);
 }
 
-/* Automotive Brand Identity */
+/* Automotive Brand Identity (Colorful, High-Contrast) */
 .brand-logo-link {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: clamp(8px, 1vw, 12px);
   text-decoration: none;
   flex-shrink: 0;
   transition: transform var(--transition-fast);
@@ -156,7 +171,7 @@
   width: 44px;
   height: 44px;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 8px rgba(246, 184, 23, 0.25));
+  filter: drop-shadow(0 2px 8px rgba(22, 77, 170, 0.25));
 }
 
 .brand-emblem-svg {
@@ -172,28 +187,34 @@
 
 .brand-name {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
   font-weight: 900;
-  color: #FFFFFF;
+  color: var(--color-deep-blue, #164DAA);
   line-height: 1.1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .brand-sub {
   font-family: var(--font-body);
   font-size: 0.725rem;
   font-weight: 800;
-  color: var(--color-warm-yellow);
-  letter-spacing: 0.08em;
+  color: #D97706;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .brand-loc {
   font-size: 0.625rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.05em;
+  color: #64748B;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+@media (min-width: 1024px) and (max-width: 1180px) {
+  .brand-loc {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -215,38 +236,58 @@
   }
 }
 
-/* Desktop Navigation List */
+/* --------------------------------------------------------------------------
+   Desktop Navigation List (Fits perfectly, no overflow, responsive labels)
+   -------------------------------------------------------------------------- */
 .desktop-nav {
   display: none;
 }
 
 @media (min-width: 1024px) {
   .desktop-nav {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  justify-content: center;
+  gap: clamp(3px, 0.5vw, 8px);
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-link {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-  padding: 8px 14px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #1E293B;
+  padding: 7px 11px;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
   white-space: nowrap;
   position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-link:hover {
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-deep-blue, #164DAA);
+  background-color: #EFF6FF;
+  box-shadow: 0 2px 8px rgba(22, 77, 170, 0.12);
   transform: translateY(-1px);
 }
 
@@ -254,34 +295,69 @@
   transform: scale(0.98);
 }
 
-/* Header Actions */
+/* Adaptive Labels: Short on compact desktop, full on large desktop */
+@media (min-width: 1024px) and (max-width: 1240px) {
+  .nav-label-full {
+    display: none;
+  }
+  .nav-label-short {
+    display: inline;
+  }
+  .nav-link {
+    padding: 6px 9px;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 1241px) {
+  .nav-label-full {
+    display: inline;
+  }
+  .nav-label-short {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-label-full {
+    display: inline;
+  }
+  .nav-label-short {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Header Actions
+   -------------------------------------------------------------------------- */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: clamp(6px, 0.8vw, 12px);
+  flex-shrink: 0;
 }
 
-/* Quick WhatsApp Pill */
+/* Quick WhatsApp Button (Vibrant Emerald Green) */
 .btn-header-wa {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 8px 14px;
   border-radius: var(--radius-full);
-  background-color: rgba(37, 211, 102, 0.12);
-  border: 1px solid rgba(37, 211, 102, 0.35);
-  color: #25D366;
-  font-size: var(--text-xs);
-  font-weight: 700;
+  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  font-weight: 800;
   text-decoration: none;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.35);
   transition: all var(--transition-fast);
 }
 
 .btn-header-wa:hover {
-  background-color: #25D366;
-  border-color: #25D366;
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
   color: #FFFFFF;
-  box-shadow: 0 0 16px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.55);
   transform: translateY(-1px);
 }
 
@@ -301,29 +377,31 @@
   }
 }
 
-/* Direct Phone Call Button */
+/* Direct Phone Call Button (Vibrant Automotive Golden Yellow) */
 .btn-header-call {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   background: linear-gradient(135deg, #F6B817 0%, #E2A60C 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #101820;
-  padding: 7px 16px;
+  border: 1px solid rgba(246, 184, 23, 0.7);
+  color: #0F2E64;
+  padding: 6px 15px;
   border-radius: var(--radius-full);
   font-weight: 800;
-  box-shadow: 0 3px 12px rgba(246, 184, 23, 0.35);
+  box-shadow: 0 3px 12px rgba(246, 184, 23, 0.4);
   transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
 .btn-header-call:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(246, 184, 23, 0.55);
-  filter: brightness(1.05);
+  box-shadow: 0 6px 20px rgba(246, 184, 23, 0.6);
+  filter: brightness(1.04);
 }
 
 .call-phone-icon {
-  color: #101820;
+  color: #0F2E64;
+  flex-shrink: 0;
 }
 
 .call-text {
@@ -334,9 +412,9 @@
 
 .call-sub {
   font-size: 0.65rem;
-  color: rgba(16, 24, 32, 0.75);
+  color: rgba(15, 46, 100, 0.85);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.04em;
 }
 
@@ -344,6 +422,29 @@
   font-size: 0.85rem;
   font-weight: 900;
   letter-spacing: 0.02em;
+  color: #0F2E64;
+}
+
+.call-text-compact {
+  display: none;
+  font-size: 0.8125rem;
+  font-weight: 900;
+  color: #0F2E64;
+}
+
+@media (min-width: 1024px) and (max-width: 1180px) {
+  .call-text {
+    display: none;
+  }
+  .call-text-compact {
+    display: inline;
+  }
+  .btn-header-call {
+    padding: 7px 12px;
+  }
+  .btn-header-wa {
+    padding: 7px 11px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -357,24 +458,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.06);
+  width: 42px;
+  height: 42px;
+  color: var(--color-deep-blue, #164DAA);
+  background-color: #EFF6FF;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1.5px solid #BFDBFE;
   transition: all var(--transition-fast);
 }
 
 .mobile-menu-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  border-color: var(--color-warm-yellow);
+  background-color: #DBEAFE;
+  border-color: var(--color-deep-blue, #164DAA);
 }
 
 .mobile-menu-toggle.active {
-  background-color: rgba(246, 184, 23, 0.15);
-  border-color: var(--color-warm-yellow);
-  color: var(--color-warm-yellow);
+  background-color: var(--color-deep-blue, #164DAA);
+  border-color: var(--color-deep-blue, #164DAA);
+  color: #FFFFFF;
 }
 
 @media (min-width: 1024px) {
@@ -384,7 +485,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Mobile Drawer Menu (Automotive Dark Glass Theme)
+   Mobile Drawer Menu (Bright, Colorful Retail Design)
    -------------------------------------------------------------------------- */
 .mobile-drawer {
   position: fixed;
@@ -393,9 +494,9 @@
   width: 320px;
   max-width: 85vw;
   height: 100vh;
-  background-color: #0E1624;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.6);
+  background-color: #FFFFFF;
+  border-left: 2px solid #BFDBFE;
+  box-shadow: -8px 0 36px rgba(22, 77, 170, 0.2);
   z-index: var(--z-drawer);
   transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
@@ -410,7 +511,7 @@
 .mobile-drawer-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(6, 11, 18, 0.7);
+  background-color: rgba(16, 24, 32, 0.6);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: calc(var(--z-drawer) - 1);
@@ -427,8 +528,9 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-4) var(--space-5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background-color: rgba(6, 11, 18, 0.5);
+  background: linear-gradient(135deg, #164DAA 0%, #0D2E68 100%);
+  color: #FFFFFF;
+  border-bottom: 2px solid var(--color-warm-yellow);
 }
 
 .drawer-brand {
@@ -440,9 +542,9 @@
 .drawer-badge {
   width: 34px;
   height: 34px;
-  background: linear-gradient(135deg, #164DAA 0%, #0D2E68 100%);
-  border: 1.5px solid var(--color-warm-yellow);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #FFDE6A 0%, #F6B817 100%);
+  border: 1.5px solid #FFFFFF;
+  color: #0F2E64;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -453,7 +555,7 @@
 
 .drawer-brand-name {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 900;
   font-size: 0.95rem;
   color: #FFFFFF;
   display: block;
@@ -461,27 +563,27 @@
 
 .drawer-brand-sub {
   font-size: 0.65rem;
-  color: var(--color-warm-yellow);
-  font-weight: 600;
+  color: #FFDE6A;
+  font-weight: 700;
   display: block;
   text-transform: uppercase;
 }
 
 .drawer-close-btn {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.75);
-  background-color: rgba(255, 255, 255, 0.06);
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
 }
 
 .drawer-close-btn:hover {
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.15);
+  color: #0F2E64;
+  background-color: #FFDE6A;
 }
 
 .drawer-status-bar {
@@ -489,11 +591,11 @@
   align-items: center;
   gap: 8px;
   padding: 10px var(--space-5);
-  background-color: rgba(34, 197, 94, 0.08);
-  border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+  background-color: #ECFDF5;
+  border-bottom: 1px solid #A7F3D0;
   font-size: 0.725rem;
-  color: #86EFAC;
-  font-weight: 600;
+  color: #047857;
+  font-weight: 700;
 }
 
 .mobile-nav {
@@ -515,22 +617,22 @@
   padding: 12px 14px;
   border-radius: var(--radius-md);
   font-size: var(--text-base);
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  color: #1E293B;
   transition: all var(--transition-fast);
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link:active {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--color-warm-yellow);
+  background-color: #EFF6FF;
+  color: var(--color-deep-blue, #164DAA);
   padding-left: 18px;
 }
 
 .mobile-drawer-footer {
   padding: var(--space-5);
-  background-color: rgba(6, 11, 18, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -538,15 +640,16 @@
 
 .drawer-divisions-note {
   font-size: 0.725rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: #475569;
   line-height: 1.4;
   margin-bottom: var(--space-1);
 }
 
 .drawer-divisions-note strong {
-  color: #FFFFFF;
+  color: var(--color-deep-blue, #164DAA);
   display: block;
   margin-bottom: 3px;
+  font-weight: 800;
 }
 
 .mobile-drawer-call-btn,
