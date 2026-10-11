@@ -290,8 +290,8 @@ export default function PartEnquirySection() {
                   </p>
                   <div className="counter-address-box">
                     <strong>New Venkateswara Oil &amp; Automobiles</strong>
-                    <span>Plot No. 167, Auto Nagar, Nellore</span>
-                    <span>Landmark: Near commercial transport hub</span>
+                    <span>Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore</span>
+                    <span>Landmark: Near Ayyappa Temple</span>
                   </div>
                 </div>
               </div>
@@ -379,15 +379,21 @@ export default function PartEnquirySection() {
 
               <div className="journey-helper-col">
                 <div className="helper-card">
-                  <h4 className="helper-title">Brands Carried in Store:</h4>
+                  <h4 className="helper-title">All Major Oil Companies Stocked:</h4>
                   <div className="helper-brands-tags">
-                    <span className="brand-tag">Gulf Lubricants</span>
-                    <span className="brand-tag">Veedol Oils</span>
+                    <span className="brand-tag">All Major Brands</span>
+                    <span className="brand-tag">Castrol</span>
+                    <span className="brand-tag">Gulf</span>
+                    <span className="brand-tag">Shell</span>
+                    <span className="brand-tag">Mobil</span>
+                    <span className="brand-tag">Servo (IOCL)</span>
                     <span className="brand-tag">MAK (BPCL)</span>
-                    <span className="brand-tag">Eni High-Performance</span>
+                    <span className="brand-tag">Veedol</span>
+                    <span className="brand-tag">HPCL</span>
+                    <span className="brand-tag">Motul &amp; Eni</span>
                   </div>
                   <div className="helper-notice">
-                    All lubricants are sold in genuine, factory-sealed containers with verifiable manufacturer batch codes and seal rings.
+                    We stock original lubricants from all leading oil companies in genuine, factory-sealed containers with verifiable manufacturer tamper-evident seals.
                   </div>
                 </div>
               </div>

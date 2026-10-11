@@ -70,7 +70,7 @@ export const SERVICES = [
     ],
     relatedServiceSlugs: ["engine-oil", "gear-oil", "lubricating-grease"],
     seoTitle: "Commercial Vehicle Spare Parts in Nellore | New Venkateswara Oil & Automobiles",
-    seoDescription: "Enquire about commercial vehicle spare parts, LEYPARTS and VALUEPARTS at New Venkateswara Oil & Automobiles, Auto Nagar, Nellore. Call 9440529777.",
+    seoDescription: "Enquire about commercial vehicle spare parts, LEYPARTS and VALUEPARTS at New Venkateswara Oil & Automobiles, Near Ayyappa Temple, Auto Nagar, Nellore. Call 9440529777.",
   },
   {
     slug: "engine-oil",
@@ -80,9 +80,9 @@ export const SERVICES = [
     published: true,
     heroImage: "/images/lubricant-gulf-supremefleet.jpg",
     heroImageFallback: "/images/automotive-oils-lubricants.jpg",
-    imageAlt: "Gulf Supreme Duty LE and Superfleet Dura Max diesel engine oil pails approved by Ashok Leyland",
-    shortDescription: "Heavy-duty diesel engine oils and automotive engine lubricants from Gulf, MAK, Veedol, and Eni in Nellore.",
-    introduction: "Proper engine lubrication is critical for engine lifespan, fuel efficiency, and temperature control. We stock automotive and commercial diesel engine oils from recognized lubricant manufacturers in Auto Nagar, Nellore.",
+    imageAlt: "Heavy-duty diesel and automotive engine oil packaging from leading oil companies",
+    shortDescription: "Heavy-duty diesel engine oils and automotive engine lubricants from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and more) in Nellore.",
+    introduction: "Proper engine lubrication is critical for engine lifespan, fuel efficiency, and temperature control. We stock automotive and commercial diesel engine oils from all major oil companies at our counter near Ayyappa Temple, Auto Nagar, Nellore.",
     overview: {
       whatItIncludes: "Mineral, semi-synthetic, and synthetic heavy-duty diesel engine oils (HDDEO), multigrade engine lubricants (such as 15W-40, 20W-50, 10W-30 depending on manufacturer recommendation), and automotive engine oils.",
       generalPurpose: "Minimizing internal friction, preventing piston deposit build-up, neutralizing combustion acids, and dissipating heat across heavy operating conditions.",
@@ -94,25 +94,25 @@ export const SERVICES = [
       ],
       selectionConsiderations: "Engine oil selection must always adhere to the engine manufacturer's specified viscosity grade (SAE) and performance standard (API CI-4, CK-4, or vehicle OEM specifications). Do not use an unapproved viscosity grade.",
     },
-    relevantBrands: ["Gulf", "MAK", "Veedol", "Eni"],
+    relevantBrands: ["All Major Brands", "Castrol", "Gulf", "Shell", "Mobil", "Servo", "MAK", "Veedol"],
     verifiedProducts: [
       {
-        name: "MAK Heavy Duty Diesel Engine Oil",
+        name: "Commercial Heavy-Duty Diesel Engine Oils",
         category: "Diesel Engine Oil",
-        description: "Formulated for commercial diesel transport engines requiring robust soot handling and wear protection.",
-        packaging: "Various pack sizes from 1L, 5L to 20L and barrels (enquire for current stock)",
+        description: "Formulated for commercial diesel transport engines requiring robust soot handling and wear protection. Available across all major oil companies.",
+        packaging: "Various pack sizes from 1L, 5L, 7.5L, 10L, 15L to 20L, 50L and 210L barrels (enquire for current stock)",
       },
       {
-        name: "Gulf Commercial Fleet Engine Oil",
-        category: "Diesel Engine Oil",
-        description: "High-performance multigrade diesel engine lubricant providing deposit control for long-haul duty.",
-        packaging: "Factory sealed containers (enquire for available sizes)",
-      },
-      {
-        name: "Veedol & Eni Engine Lubricants",
+        name: "Passenger Car & Bike Engine Oils",
         category: "Automotive Engine Oil",
-        description: "Specialized automotive lubricants engineered for wear reduction and high thermal stability.",
-        packaging: "Original manufacturer sealed packs",
+        description: "High-performance multigrade and synthetic engine lubricants providing deposit control and wear protection from all leading lubricant brands.",
+        packaging: "Factory-sealed containers in 900ml, 1L, 3.5L, and 5L packs",
+      },
+      {
+        name: "Long-Drain Fleet Engine Lubricants",
+        category: "Commercial Fleet Oil",
+        description: "Specialized fleet lubricants engineered for high thermal stability and extended drain intervals adhering to OEM specifications.",
+        packaging: "Original manufacturer sealed packs and pails",
       },
     ],
     guidance: {
@@ -127,7 +127,7 @@ export const SERVICES = [
       },
       {
         question: "What lubricant brands do you carry for engine oil?",
-        answer: "Our visible inventory includes products from Gulf, MAK, Veedol, and Eni among other recognized lubricant packaging.",
+        answer: "We stock engine oils from all major oil companies including Castrol, Gulf, Shell, Mobil, Servo (IOCL), MAK (BPCL), Veedol, HPCL, and other leading manufacturers in factory-sealed containers.",
       },
       {
         question: "Can I enquire about bulk pack sizes for fleet operations?",
@@ -136,7 +136,7 @@ export const SERVICES = [
     ],
     relatedServiceSlugs: ["gear-oil", "lubricating-grease", "commercial-vehicle-spare-parts"],
     seoTitle: "Engine Oil & Diesel Lubricants in Nellore | New Venkateswara Oil & Automobiles",
-    seoDescription: "Explore automotive and commercial diesel engine oils from Gulf, MAK, Veedol, and Eni at New Venkateswara Oil & Automobiles, Auto Nagar, Nellore.",
+    seoDescription: "Explore automotive and commercial diesel engine oils from all major oil companies at New Venkateswara Oil & Automobiles, Near Ayyappa Temple, Auto Nagar, Nellore.",
   },
   {
     slug: "gear-oil",
@@ -147,8 +147,8 @@ export const SERVICES = [
     heroImage: "/images/lubricant-eni-isint-synthetic.jpg",
     heroImageFallback: "/images/automotive-oils-lubricants.jpg",
     imageAlt: "Eni 85W-140 GL-5 transmission and differential gear oil cartons and synthetic lubricant packaging",
-    shortDescription: "Extreme pressure automotive gear oils (80W-90, 85W-140) for manual transmissions and heavy differentials.",
-    introduction: "Commercial vehicle gearboxes and drive axles endure extreme torque and heavy tooth pressure. We provide dedicated automotive gear lubricants formulated with EP (Extreme Pressure) additives for heavy transmissions and differentials.",
+    shortDescription: "Extreme pressure automotive gear oils (80W-90, 85W-140) from all major oil companies for manual transmissions and heavy differentials.",
+    introduction: "Commercial vehicle gearboxes and drive axles endure extreme torque and heavy tooth pressure. We provide dedicated automotive gear lubricants from all major oil companies formulated with EP (Extreme Pressure) additives for heavy transmissions and differentials near Ayyappa Temple, Auto Nagar, Nellore.",
     overview: {
       whatItIncludes: "Hypoid gear oils, manual transmission fluids, differential gear lubricants conforming to API GL-4 and API GL-5 standards, multigrade gear oils such as 80W-90 and 85W-140.",
       generalPurpose: "Preventing gear tooth pitting, scuffing, and wear under shock loads while ensuring smooth shift performance in commercial transmissions and drive differentials.",
@@ -160,19 +160,19 @@ export const SERVICES = [
       ],
       selectionConsiderations: "Always verify whether your gearbox requires API GL-4 (often required for transmissions with yellow metal synchronizers) or API GL-5 (designed for high-load hypoid differentials). Using GL-5 in certain manual synchronizer boxes without manufacturer approval can cause premature wear.",
     },
-    relevantBrands: ["Gulf", "MAK", "Veedol", "Eni"],
+    relevantBrands: ["All Major Brands", "Castrol", "Gulf", "Shell", "Mobil", "Servo", "MAK", "Veedol"],
     verifiedProducts: [
       {
         name: "Extreme Pressure Hypoid Gear Oil (GL-5)",
         category: "Differential & Axle Oil",
-        description: "Formulated for commercial vehicle rear axles and differentials operating under severe torque conditions.",
-        packaging: "Factory sealed containers (enquire for available sizes)",
+        description: "Formulated for commercial vehicle rear axles and differentials operating under severe torque conditions. Available from all major oil companies.",
+        packaging: "Factory sealed containers in 1L, 5L, 20L, and 210L barrels",
       },
       {
         name: "Manual Transmission Fluid (GL-4)",
         category: "Transmission Oil",
-        description: "Engineered for synchronized commercial vehicle manual gearboxes requiring smooth engagement.",
-        packaging: "Standard manufacturer packs",
+        description: "Engineered for synchronized commercial vehicle manual gearboxes requiring smooth engagement without synchronizer corrosion.",
+        packaging: "Standard manufacturer packs from leading lubricant brands",
       },
     ],
     guidance: {
@@ -187,12 +187,12 @@ export const SERVICES = [
       },
       {
         question: "What gear oil viscosities are commonly available?",
-        answer: "Common automotive grades include 80W-90 and 85W-140 for heavy commercial differentials. Contact our store for current brand options.",
+        answer: "Common automotive grades include 80W-90 and 85W-140 for heavy commercial differentials from all major oil companies. Contact our store for current stock.",
       },
     ],
     relatedServiceSlugs: ["engine-oil", "lubricating-grease", "hydraulic-oil"],
     seoTitle: "Gear Oil & Transmission Lubricants in Nellore | New Venkateswara Oil & Automobiles",
-    seoDescription: "Commercial vehicle gear oils and differential lubricants in Auto Nagar, Nellore. Contact New Venkateswara Oil & Automobiles at 9440529777.",
+    seoDescription: "Commercial vehicle gear oils and differential lubricants from all major oil companies at New Venkateswara Oil & Automobiles, Near Ayyappa Temple, Auto Nagar, Nellore. Contact 9440529777.",
   },
   {
     slug: "hydraulic-oil",
@@ -202,9 +202,9 @@ export const SERVICES = [
     published: true,
     heroImage: "/images/lubricant-mak-hydrol-aw68.jpg",
     heroImageFallback: "/images/automotive-oils-lubricants.jpg",
-    imageAlt: "MAK Hydrol AW 68 Anti-Wear Hydraulic Oil commercial pail for tippers and machinery",
-    shortDescription: "High-grade hydraulic fluids (ISO VG 46, VG 68) for commercial tippers, lifts, and hydraulic systems in Nellore.",
-    introduction: "Commercial vehicle tipping mechanisms, hydraulic tail lifts, and hydraulic steering systems depend on high-quality anti-wear hydraulic fluids to maintain pressure and protect precision pumps.",
+    imageAlt: "Anti-Wear Hydraulic Oil commercial pail for tippers, heavy lifts and machinery",
+    shortDescription: "High-grade hydraulic fluids (ISO VG 46, VG 68) from all major oil companies for commercial tippers, lifts, and hydraulic systems in Nellore.",
+    introduction: "Commercial vehicle tipping mechanisms, hydraulic tail lifts, and hydraulic steering systems depend on high-quality anti-wear hydraulic fluids to maintain pressure and protect precision pumps. We stock hydraulic oils from all major oil companies near Ayyappa Temple, Auto Nagar, Nellore.",
     overview: {
       whatItIncludes: "Anti-wear (AW) hydraulic oils across standard ISO Viscosity Grades (such as ISO VG 32, VG 46, and VG 68), formulated with oxidation inhibitors and anti-foam additives.",
       generalPurpose: "Transmitting power efficiently within hydraulic circuits while lubricating pumps, valves, and cylinders, preventing corrosion, and separating water contamination.",
@@ -216,19 +216,19 @@ export const SERVICES = [
       ],
       selectionConsiderations: "Hydraulic systems require the exact ISO viscosity grade specified by the pump manufacturer (most commonly VG 46 or VG 68 in tropical operating conditions). Incorrect viscosity can lead to cavitation, sluggish lift, or pump overheating.",
     },
-    relevantBrands: ["Gulf", "MAK", "Veedol", "Eni"],
+    relevantBrands: ["All Major Brands", "Servo", "MAK", "Gulf", "Castrol", "Shell", "HPCL"],
     verifiedProducts: [
       {
         name: "Anti-Wear Hydraulic Oil ISO VG 46",
         category: "Hydraulic Fluid",
-        description: "Versatile hydraulic fluid for commercial tipper systems and general hydraulic power units.",
-        packaging: "Manufacturer sealed cans and buckets",
+        description: "Versatile hydraulic fluid for commercial tipper systems and general hydraulic power units from leading oil companies.",
+        packaging: "Manufacturer sealed cans and buckets (20L, 210L)",
       },
       {
         name: "Heavy-Duty Hydraulic Oil ISO VG 68",
         category: "Hydraulic Fluid",
         description: "Higher viscosity hydraulic fluid designed for severe high-ambient-temperature operations.",
-        packaging: "Factory sealed containers",
+        packaging: "Factory sealed containers from all major petroleum brands",
       },
     ],
     guidance: {
@@ -248,7 +248,7 @@ export const SERVICES = [
     ],
     relatedServiceSlugs: ["lubricating-grease", "gear-oil", "engine-oil"],
     seoTitle: "Hydraulic Oil in Nellore | New Venkateswara Oil & Automobiles",
-    seoDescription: "Anti-wear hydraulic oil (VG 46, VG 68) for commercial tippers and machinery at New Venkateswara Oil & Automobiles, Auto Nagar, Nellore.",
+    seoDescription: "Anti-wear hydraulic oil (VG 46, VG 68) from all major oil companies at New Venkateswara Oil & Automobiles, Near Ayyappa Temple, Auto Nagar, Nellore.",
   },
   {
     slug: "lubricating-grease",
@@ -258,9 +258,9 @@ export const SERVICES = [
     published: true,
     heroImage: "/images/lubricant-grease-hro-ap3.jpg",
     heroImageFallback: "/images/automotive-oils-lubricants.jpg",
-    imageAlt: "HRO AP-3 Red Gel Longlife wheel bearing and chassis lubricating grease commercial buckets",
-    shortDescription: "Chassis grease, wheel bearing grease, and high-temperature EP grease for commercial vehicles in Auto Nagar.",
-    introduction: "Wheel bearings, kingpins, propeller shaft universal joints, and suspension bushings require high-adhesion lubricating grease to withstand high loads, water washout, and friction heat.",
+    imageAlt: "High performance wheel bearing and chassis lubricating grease commercial packaging",
+    shortDescription: "Chassis grease, wheel bearing grease, and high-temperature EP grease from all major lubricant companies for commercial vehicles in Auto Nagar.",
+    introduction: "Wheel bearings, kingpins, propeller shaft universal joints, and suspension bushings require high-adhesion lubricating grease to withstand high loads, water washout, and friction heat. We stock genuine grease formulations from all major oil companies near Ayyappa Temple, Auto Nagar, Nellore.",
     overview: {
       whatItIncludes: "Lithium-base wheel bearing grease, multi-purpose automotive chassis grease, high-temperature EP (Extreme Pressure) grease, and water-resistant lubricating compounds.",
       generalPurpose: "Providing continuous film lubrication where liquid oil would leak out, sealing bearing surfaces against road grit, moisture, and road wash.",
@@ -272,19 +272,19 @@ export const SERVICES = [
       ],
       selectionConsiderations: "Commercial vehicle wheel hubs encounter high brake heat and require high-temperature wheel bearing grease (NLGI Grade 2 or 3 Lithium Complex). General chassis points may use standard lithium multipurpose grease. Never mix incompatible thickener bases.",
     },
-    relevantBrands: ["Gulf", "MAK", "Veedol", "Eni"],
+    relevantBrands: ["All Major Brands", "Castrol", "Gulf", "Shell", "Mobil", "Servo", "MAK", "Veedol"],
     verifiedProducts: [
       {
         name: "Wheel Bearing Grease (High Temp)",
         category: "Bearing Grease",
-        description: "Formulated for heavy commercial vehicle wheel hubs operating under severe braking heat.",
-        packaging: "Tins, tubs, and buckets (enquire for available weights)",
+        description: "Formulated for heavy commercial vehicle wheel hubs operating under severe braking heat from all major lubricant brands.",
+        packaging: "Tins, tubs, and buckets from 500g, 1kg, 5kg to 18kg and 180kg barrels",
       },
       {
         name: "Multipurpose Chassis Grease",
         category: "Chassis Grease",
         description: "Adhesive grease designed for kingpins, universal joints, and chassis greasing points.",
-        packaging: "Standard manufacturer packs",
+        packaging: "Standard manufacturer packs from leading petroleum brands",
       },
     ],
     guidance: {
@@ -304,7 +304,7 @@ export const SERVICES = [
     ],
     relatedServiceSlugs: ["engine-oil", "gear-oil", "commercial-vehicle-spare-parts"],
     seoTitle: "Lubricating Grease in Nellore | New Venkateswara Oil & Automobiles",
-    seoDescription: "Commercial vehicle wheel bearing grease and chassis lubricants at New Venkateswara Oil & Automobiles, Auto Nagar, Nellore. Call 9440529777.",
+    seoDescription: "Commercial vehicle wheel bearing grease and chassis lubricants from all major oil companies at New Venkateswara Oil & Automobiles, Near Ayyappa Temple, Auto Nagar, Nellore. Call 9440529777.",
   },
 ];
 

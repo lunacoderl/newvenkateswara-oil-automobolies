@@ -2983,3 +2983,24 @@
     display: none;
   }
 }
+
+/* Landmark highlight badge */
+.card-item-landmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  padding: 3px 8px;
+  background-color: rgba(30, 58, 138, 0.08);
+  border: 1px solid rgba(30, 58, 138, 0.2);
+  border-radius: var(--radius-sm);
+  color: var(--color-deep-blue);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.card-item-landmark strong {
+  color: #1e3a8a;
+  font-weight: 700;
+}

@@ -16,11 +16,11 @@ export default function Home() {
     name: BUSINESS.name,
     legalName: BUSINESS.legalName,
     description:
-      'Commercial vehicle spare parts (Ashok Leyland Retail Parts Store / LEYPARTS / VALUEPARTS) and automotive oils, lubricants & grease (Gulf, Veedol, MAK, Eni) in Auto Nagar, Nellore, Andhra Pradesh.',
+      'Commercial vehicle spare parts (Ashok Leyland Retail Parts Store / LEYPARTS / VALUEPARTS) and lubricants from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol) near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh.',
     telephone: '+91-9440529777',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: BUSINESS.address.plot,
+      streetAddress: `${BUSINESS.address.plot}, ${BUSINESS.address.landmark}`,
       addressLocality: BUSINESS.address.area,
       addressRegion: BUSINESS.address.state,
       addressCountry: 'IN',
@@ -38,7 +38,7 @@ export default function Home() {
     <div className="home-page">
       <SEO
         title="New Venkateswara Oil & Automobiles | Automotive Spare Parts & Lubricants in Nellore"
-        description="One trusted store in Auto Nagar, Nellore for Ashok Leyland commercial vehicle spare parts (LEYPARTS, VALUEPARTS) and automotive lubricants (Gulf, Veedol, MAK, Eni). Call 9440529777."
+        description="One trusted store near Ayyappa Temple, Auto Nagar, Nellore for Ashok Leyland commercial vehicle spare parts (LEYPARTS, VALUEPARTS) and lubricants from all major oil companies. Call 9440529777."
         canonicalPath="/"
         schemaData={localBusinessSchema}
       />

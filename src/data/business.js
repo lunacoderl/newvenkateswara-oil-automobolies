@@ -12,13 +12,16 @@ export const BUSINESS = {
   whatsappBaseUrl: "https://wa.me/919440529777",
   address: {
     plot: "Plot No. 167",
+    landmark: "Near Ayyappa Temple",
     area: "Auto Nagar",
     city: "Nellore",
     state: "Andhra Pradesh",
     country: "India",
-    full: "Plot No. 167, Auto Nagar, Nellore, Andhra Pradesh, India",
+    pincode: "524004",
+    full: "Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh, India",
+    display: "Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore",
   },
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Plot+No.+167,+Auto+Nagar,+Nellore,+Andhra+Pradesh,+India",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Plot+No.+167,+Near+Ayyappa+Temple,+Auto+Nagar,+Nellore,+Andhra+Pradesh,+India",
   signageBrands: [
     {
       name: "Ashok Leyland Retail Parts Store",
@@ -36,23 +39,8 @@ export const BUSINESS = {
       category: "parts",
     },
     {
-      name: "Gulf",
-      label: "Automotive Lubricants",
-      category: "lubricants",
-    },
-    {
-      name: "Veedol",
-      label: "Lubricating Oils & Grease",
-      category: "lubricants",
-    },
-    {
-      name: "MAK",
-      label: "Automotive & Industrial Oils",
-      category: "lubricants",
-    },
-    {
-      name: "Eni",
-      label: "High-Performance Lubricants",
+      name: "All Major Oil Companies",
+      label: "Castrol · Gulf · Shell · Mobil · Servo · MAK · Veedol · HPCL",
       category: "lubricants",
     },
   ],
@@ -68,9 +56,9 @@ export const BUSINESS = {
     },
     {
       id: "lubricants",
-      title: "Automotive Oils & Lubricants",
+      title: "All Major Company Oils & Lubricants",
       shortTitle: "Oils & Lubricants",
-      description: "Explore lubricant categories and enquire about the product specifications and pack sizes you need.",
+      description: "Stocking genuine engine oils, gear oils, hydraulic fluids, and greases from all major oil companies. Enquire for specifications and pack sizes.",
       ctaText: "EXPLORE LUBRICANTS",
       anchor: "#lubricants",
       route: "/services/engine-oil",
@@ -97,7 +85,7 @@ export function buildWhatsAppEnquiryUrl({
 } = {}) {
   const lines = [
     `*Enquiry for New Venkateswara Oil & Automobiles*`,
-    `📍 Location: Auto Nagar, Nellore`,
+    `📍 Location: Near Ayyappa Temple, Auto Nagar, Nellore`,
     `----------------------------------------`,
     `*Category:* ${category}`,
   ];

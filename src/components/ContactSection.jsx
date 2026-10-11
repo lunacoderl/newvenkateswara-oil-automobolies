@@ -21,7 +21,7 @@ export default function ContactSection() {
             Store Location &amp; Contact Details
           </h2>
           <p className="section-subtitle">
-            Located in Auto Nagar, Nellore. Visit our physical sales counter for immediate parts collection, 
+            Located Near Ayyappa Temple, Auto Nagar, Nellore. Visit our physical sales counter for immediate parts collection, 
             or get in touch via phone or WhatsApp for stock check and fitment guidance.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function ContactSection() {
             <div className="storefront-media-box">
               <SmartImage
                 src="/images/hero-bg.png"
-                alt="New Venkateswara Oil & Automobiles storefront and facility at Plot 167, Auto Nagar, Nellore"
+                alt="New Venkateswara Oil & Automobiles storefront and facility at Plot 167, Near Ayyappa Temple, Auto Nagar, Nellore"
                 width={600}
                 height={380}
                 aspectRatio="16/10"
@@ -50,14 +50,14 @@ export default function ContactSection() {
             <div className="storefront-details-bar">
               <div>
                 <strong className="storefront-name">{BUSINESS.name}</strong>
-                <p className="storefront-sub">Ashok Leyland Retail Parts Store &amp; Automotive Lubricants Counter</p>
+                <p className="storefront-sub">Ashok Leyland Retail Parts Store &amp; All Major Company Lubricants Counter</p>
               </div>
               <a
                 href={BUSINESS.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-directions-quick"
-                aria-label="Get Google Maps Driving Directions to Plot 167 Auto Nagar Nellore"
+                aria-label="Get Google Maps Driving Directions to Plot 167 Near Ayyappa Temple Auto Nagar Nellore"
               >
                 <Navigation size={16} aria-hidden="true" />
                 <span>Directions</span>
@@ -67,15 +67,16 @@ export default function ContactSection() {
 
           {/* Right Column: Key Details & Direct Action Cards */}
           <div className="contact-details-cards-col">
-            {/* Address Card */}
+            {/* Address Card with Landmark */}
             <div className="contact-card-item hover-lift">
               <div className="card-icon-circle">
                 <MapPin size={22} aria-hidden="true" />
               </div>
               <div className="card-item-content">
-                <span className="card-item-label">Store Address</span>
+                <span className="card-item-label">Store Address &amp; Landmark</span>
                 <address className="card-item-address">
                   <strong>{BUSINESS.address.plot}</strong>, {BUSINESS.address.area}<br />
+                  <span className="card-item-landmark">Landmark: <strong>{BUSINESS.address.landmark}</strong></span><br />
                   {BUSINESS.address.city}, {BUSINESS.address.state}, India
                 </address>
                 <a
@@ -144,7 +145,7 @@ export default function ContactSection() {
           <div className="map-header-bar">
             <div className="map-title-row">
               <Navigation size={18} aria-hidden="true" />
-              <strong>Google Maps Location · Auto Nagar, Nellore</strong>
+              <strong>Google Maps Location · Near Ayyappa Temple, Auto Nagar, Nellore</strong>
             </div>
             <a
               href={BUSINESS.mapsUrl}
@@ -158,8 +159,8 @@ export default function ContactSection() {
           </div>
           <div className="map-frame-box">
             <iframe
-              title="Google Maps Location of New Venkateswara Oil & Automobiles in Auto Nagar, Nellore"
-              src="https://maps.google.com/maps?q=Auto+Nagar,+Nellore,+Andhra+Pradesh,+India&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              title="Google Maps Location of New Venkateswara Oil & Automobiles Near Ayyappa Temple in Auto Nagar, Nellore"
+              src="https://maps.google.com/maps?q=Plot+No.+167,+Near+Ayyappa+Temple,+Auto+Nagar,+Nellore,+Andhra+Pradesh,+India&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="340"
               style={{ border: 0 }}

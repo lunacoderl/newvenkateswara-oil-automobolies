@@ -28,7 +28,7 @@ export default function AboutSection() {
               />
               <div className="about-img-tag">
                 <MapPin size={16} aria-hidden="true" />
-                <span>Plot No. 167, Auto Nagar, Nellore</span>
+                <span>Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore</span>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="about-lead-paragraph">
-              Operating from <strong>Plot No. 167, Auto Nagar, Nellore</strong>, 
+              Operating from <strong>Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore</strong>, 
               <strong> New Venkateswara Oil &amp; Automobiles</strong> was built to serve 
               commercial vehicle operators, transport contractors, automotive mechanics, and individual motorists 
               with authentic parts and certified lubricants under one roof.
@@ -85,7 +85,7 @@ export default function AboutSection() {
                 <div>
                   <h3 className="division-card-title">Automotive Oils, Lubricants &amp; Greases</h3>
                   <p className="division-card-desc">
-                    Comprehensive selection of multi-grade engine oils, extreme pressure gear oils, hydraulic tipper fluids, and chassis greases from verified manufacturers: Gulf, Veedol, MAK, and Eni.
+                    Comprehensive selection of multi-grade engine oils, extreme pressure gear oils, hydraulic tipper fluids, and chassis greases from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HP, Motul, and more).
                   </p>
                 </div>
               </div>

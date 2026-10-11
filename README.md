@@ -7,12 +7,12 @@
 ## 🏢 Business Overview
 
 - **Business Name**: New Venkateswara Oil & Automobiles
-- **Location**: Plot No. 167, Auto Nagar, Nellore, Andhra Pradesh, India
+- **Location**: Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh, India
 - **Phone**: +91 94405 29777 (`tel:9440529777`)
 - **WhatsApp**: [+91 94405 29777](https://wa.me/919440529777)
 - **Primary Product Divisions**:
   1. **Commercial Vehicle Spare Parts**: Ashok Leyland Retail Parts Store, supplying genuine LEYPARTS boxed components and VALUEPARTS maintenance range for heavy commercial trucks, tippers, and haulers.
-  2. **Automotive Oils, Lubricants & Greases**: Premium heavy diesel engine oils, passenger car oils, 4T/2T motorcycle lubricants, differential gear oils, anti-wear hydraulic fluids, and wheel bearing greases from Gulf, Veedol, MAK, and Eni.
+  2. **Automotive Oils, Lubricants & Greases**: Heavy diesel engine oils, passenger car oils, 4T/2T motorcycle lubricants, differential gear oils, anti-wear hydraulic fluids, and wheel bearing greases from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HPCL, and more).
 
 ---
 
@@ -83,10 +83,10 @@ newvenkateswara-oil-automobolies/
 ### Installation & Setup
 ```bash
 # Clone the repository
-git clone https://github.com/lunacoderl/venkateswara-oil-lubricants.git
+git clone https://github.com/lunacoderl/newvenkateswara-oil-automobolies.git
 
 # Navigate into project directory
-cd venkateswara-oil-lubricants
+cd newvenkateswara-oil-automobolies
 
 # Install dependencies
 npm install
@@ -122,4 +122,4 @@ This repository is pre-configured for one-click deployment on Vercel:
 
 ## 📄 License & Disclaimers
 
-All trademarks, brand names, and logos (Ashok Leyland, LEYPARTS, VALUEPARTS, Gulf, Veedol, MAK, Eni) belong to their respective manufacturers. New Venkateswara Oil & Automobiles operates as an independent automotive retail enterprise in Auto Nagar, Nellore.
+All trademarks, brand names, and logos (Ashok Leyland, LEYPARTS, VALUEPARTS, Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and other oil companies) belong to their respective manufacturers. New Venkateswara Oil & Automobiles operates as an independent automotive retail enterprise in Auto Nagar, Nellore.

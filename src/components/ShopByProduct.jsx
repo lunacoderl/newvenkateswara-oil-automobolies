@@ -28,12 +28,12 @@ export default function ShopByProduct() {
       title: 'Automotive & Heavy-Duty Engine Oils',
       shortTitle: 'Engine Oils',
       icon: Droplets,
-      badge: 'Multi-Grade & Synthetic',
+      badge: 'All Major Oil Companies',
       image: '/images/lubricant-gulf-supremefleet.jpg',
-      imageAlt: 'Gulf Supreme Duty LE and Superfleet Dura Max diesel engine oil pails approved by Ashok Leyland',
-      description: 'High-performance engine oils for two-wheelers, passenger cars, and heavy commercial diesel transport fleets. Engineered for soot control and engine durability.',
+      imageAlt: 'Multi-brand commercial diesel engine oils and automotive lubricants packaging at Auto Nagar, Nellore',
+      description: 'High-performance engine oils from all major oil companies for two-wheelers, passenger cars, tractors, and heavy commercial diesel fleets.',
       keyItems: ['Commercial Diesel 15W-40 & 20W-50', 'Bike 4T & 2T Motorcycle Oils', 'Passenger Car Synthetic & Mineral', 'Heavy Haulage Engine Fluids'],
-      brands: ['Gulf', 'MAK', 'Veedol', 'Eni'],
+      brands: ['All Major Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK', 'Mobil'],
       isSpareParts: false,
     },
     {
@@ -44,10 +44,10 @@ export default function ShopByProduct() {
       icon: Gauge,
       badge: 'Extreme Pressure EP',
       image: '/images/lubricant-eni-isint-synthetic.jpg',
-      imageAlt: 'Eni 85W-140 GL-5 transmission and differential gear oil cartons and synthetic lubricant packaging',
-      description: 'Extreme pressure (EP) gear lubricants protecting manual gearboxes, transaxles, and rear hypoid differentials under heavy load and thermal stress.',
+      imageAlt: 'Heavy transmission and differential gear oils from major manufacturers at Auto Nagar, Nellore',
+      description: 'Extreme pressure (EP) gear lubricants from leading oil companies protecting manual transmissions and heavy differentials under high load.',
       keyItems: ['EP-90 Extreme Pressure Gear Oil', 'EP-140 & 85W-140 Heavy Differential Oil', '80W-90 Multi-Purpose Gear Fluid', 'Manual Gearbox Lubricants'],
-      brands: ['Gulf', 'MAK', 'Veedol', 'Eni'],
+      brands: ['All Major Brands', 'Castrol', 'Gulf', 'Servo', 'MAK', 'Shell', 'Veedol'],
       isSpareParts: false,
     },
     {
@@ -58,10 +58,10 @@ export default function ShopByProduct() {
       icon: Disc,
       badge: 'Anti-Wear AW-46 & AW-68',
       image: '/images/lubricant-mak-hydrol-aw68.jpg',
-      imageAlt: 'MAK Hydrol AW 68 Anti-Wear Hydraulic Oil commercial pail for tippers and machinery',
-      description: 'Specialized hydraulic fluids formulated for hydraulic tippers, lifting mechanisms, agricultural tractors, and industrial fluid systems.',
+      imageAlt: 'Anti-wear hydraulic oils for tippers, machinery, and tractors at Auto Nagar, Nellore',
+      description: 'Specialized hydraulic fluids from all leading companies formulated for hydraulic tippers, lifting rams, and agricultural tractors.',
       keyItems: ['AW-46 Anti-Wear Hydraulic Fluid', 'AW-68 Heavy Tipper Hydraulic Oil', 'Tractor Hydraulic & Lift Fluids', 'Industrial Equipment Hydraulics'],
-      brands: ['Gulf', 'MAK', 'Veedol'],
+      brands: ['All Major Brands', 'MAK', 'Servo', 'Gulf', 'Castrol', 'HPCL'],
       isSpareParts: false,
     },
     {
@@ -72,10 +72,10 @@ export default function ShopByProduct() {
       icon: ShieldAlert,
       badge: 'High-Temp Lithium EP',
       image: '/images/lubricant-grease-hro-ap3.jpg',
-      imageAlt: 'HRO AP-3 Red Gel Longlife wheel bearing and chassis lubricating grease commercial buckets',
-      description: 'High melting point lithium base and EP greases for automotive wheel bearings, chassis lubrication, universal joints, and industrial bushings.',
+      imageAlt: 'Automotive wheel bearing and chassis lubricating greases from leading manufacturers at Auto Nagar, Nellore',
+      description: 'High melting point lithium base and EP greases from major oil brands for automotive wheel bearings, chassis lubrication, and heavy kingpins.',
       keyItems: ['Wheel Bearing Lithium EP-2 / EP-3', 'Chassis & Suspension Grease', 'High-Temperature Commercial Grease', 'Water-Resistant Multi-Purpose Grease'],
-      brands: ['Gulf', 'MAK', 'Veedol', 'Eni'],
+      brands: ['All Major Brands', 'Castrol', 'Servo', 'Gulf', 'MAK', 'Mobil'],
       isSpareParts: false,
     },
   ];
@@ -91,7 +91,7 @@ export default function ShopByProduct() {
           </h2>
           <p className="section-subtitle">
             Two distinct divisions under one roof in Auto Nagar, Nellore: commercial vehicle spare parts 
-            and premium automotive lubricants. Select a category below to explore details or enquire directly.
+            and all major automotive lubricants. Select a category below to explore details or enquire directly.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function ShopByProduct() {
           <div className="division-col lubricants-col">
             <span className="division-indicator-dot lubricants-dot"></span>
             <strong>Division 2: Automotive Oils &amp; Lubricants</strong>
-            <span className="division-subtext">— Gulf, Veedol, MAK, Eni Engine Oils, Gear Oils &amp; Greases</span>
+            <span className="division-subtext">— All Major Oil Companies: Engine Oils, Gear Oils &amp; Greases</span>
           </div>
         </div>
 

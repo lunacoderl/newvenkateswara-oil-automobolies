@@ -35,36 +35,48 @@ export default function BrandShowcase() {
     },
     {
       division: 'Automotive Oils & Lubricants',
-      badge: 'Verified Packaging Brands',
+      badge: 'All Major Oil Companies Stocked',
       brands: [
+        {
+          name: 'Castrol',
+          role: 'Leading Automotive & Commercial Brand',
+          status: '100% Genuine Sealed Stock',
+          description: 'High-performance engine oils, heavy diesel fleet oils, and transmission fluids for all vehicle classes.',
+        },
         {
           name: 'Gulf',
           role: 'Commercial & Automotive Lubricants',
-          status: 'Visible Packaging',
-          description: 'Heavy diesel engine oils, passenger car oils, and commercial gear fluids.',
+          status: '100% Genuine Sealed Stock',
+          description: 'Heavy diesel engine oils, passenger car oils, gear oils, and long-drain commercial fleet formulations.',
         },
         {
-          name: 'Veedol',
-          role: 'Engine & Gear Lubricants',
-          status: 'Visible Packaging',
-          description: 'Proven multi-grade lubricating oils and transmission lubricants.',
+          name: 'Shell & Mobil',
+          role: 'Global Premium Lubricants',
+          status: '100% Genuine Sealed Stock',
+          description: 'High-durability diesel engine oils, heavy axle transmission lubricants, and advanced synthetic products.',
         },
         {
-          name: 'MAK',
-          role: 'Bharat Petroleum Lubricants',
-          status: 'Visible Packaging',
-          description: 'High-performance diesel engine oils and industrial lubricating greases.',
+          name: 'Servo (IOCL) & MAK (BPCL)',
+          role: 'Major National Petroleum Brands',
+          status: '100% Genuine Sealed Stock',
+          description: 'Heavy commercial diesel lubricants, anti-wear hydraulic tipper fluids, and extreme-pressure chassis greases.',
         },
         {
-          name: 'Eni',
-          role: 'High-Performance Engine Oils',
-          status: 'Visible Packaging',
-          description: 'Advanced Italian technology engine oils for two-wheelers and passenger vehicles.',
+          name: 'Veedol, HP & Motul',
+          role: 'Proven Automotive Formulations',
+          status: '100% Genuine Sealed Stock',
+          description: 'Multigrade diesel lubricants, tractor & agricultural equipment oils, and high-performance motorcycle oils.',
+        },
+        {
+          name: 'All Leading Companies',
+          role: 'Complete Multi-Brand Availability',
+          status: 'All Pack Sizes In Stock',
+          description: 'We stock genuine products from all major oil companies. Whatever brand your engine or gearbox requires, we supply at counter rates.',
         },
       ],
       image: '/images/lubricant-gulf-supremefleet.jpg',
-      imageAlt: 'Gulf Supreme Duty LE and Superfleet Dura Max commercial diesel engine oil pails approved by Ashok Leyland',
-      imageCaption: 'Real commercial diesel engine oil pails with manufacturer approval at Auto Nagar, Nellore',
+      imageAlt: 'Real multi-brand commercial and automotive lubricants inventory at Auto Nagar, Nellore',
+      imageCaption: 'Genuine sealed lubricants inventory from all major oil companies at Auto Nagar, Nellore',
     },
   ];
 
@@ -78,7 +90,7 @@ export default function BrandShowcase() {
             Real Products &amp; Verified Brands
           </h2>
           <p className="section-subtitle">
-            We supply genuine, factory-packaged products from established automotive manufacturers. 
+            We supply genuine, factory-packaged products from established automotive manufacturers and all major oil companies. 
             All items are inspected, verified against storefront signage and on-shelf inventory in Auto Nagar, Nellore.
           </p>
         </div>
@@ -138,8 +150,8 @@ export default function BrandShowcase() {
           <div className="notice-content">
             <strong>Authenticity &amp; Trademark Clarification:</strong>
             <p>
-              New Venkateswara Oil &amp; Automobiles is an independent automotive retail enterprise located at Plot No. 167, Auto Nagar, Nellore. 
-              Our storefront displays signage for Ashok Leyland Retail Parts Store, LEYPARTS, and VALUEPARTS, and our inventory contains genuine packaged lubricants from Gulf, Veedol, MAK, and Eni. 
+              New Venkateswara Oil &amp; Automobiles is an independent automotive retail enterprise located at Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore. 
+              Our storefront displays signage for Ashok Leyland Retail Parts Store, LEYPARTS, and VALUEPARTS, and our inventory contains genuine packaged lubricants from all major petroleum and oil companies. 
               All logos, brand names, and trademarks belong to their respective manufacturers.
             </p>
           </div>

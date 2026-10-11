@@ -33,7 +33,7 @@ export default function ShopByVehicle() {
         'High-temperature Drive Chain Lubricants',
         'Front Fork & Suspension Oils',
       ],
-      brands: ['Gulf', 'MAK', 'Veedol', 'Eni'],
+      brands: ['All Major Oil Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK', 'Veedol'],
       whatsappPreset: {
         category: 'Bikes & Scooters Lubricants',
         vehicle: 'Motorcycle / Scooter',
@@ -47,14 +47,14 @@ export default function ShopByVehicle() {
       title: 'Cars & Light Vehicles',
       subtitle: 'Passenger Cars & MPVs',
       icon: Car,
-      description: 'Full synthetic, semi-synthetic and mineral engine oils, manual transmission fluids, brake fluids, and chassis greases for petrol and diesel passenger cars.',
+      description: 'Full synthetic, semi-synthetic and mineral engine oils, manual transmission fluids, brake fluids, and chassis greases for petrol and diesel passenger cars from all major oil companies.',
       recommendedProducts: [
         'Petrol & Diesel Engine Oils (5W-30, 15W-40)',
         'Manual & Automatic Transmission Fluids',
         'Brake & Clutch Hydraulic Fluids',
         'Synthetic & Mineral Lubricating Greases',
       ],
-      brands: ['Gulf', 'MAK', 'Veedol', 'Eni'],
+      brands: ['All Major Oil Brands', 'Castrol', 'Shell', 'Mobil', 'Gulf', 'Servo', 'MAK'],
       whatsappPreset: {
         category: 'Passenger Car Lubricants',
         vehicle: 'Passenger Car (Petrol/Diesel)',
@@ -69,7 +69,7 @@ export default function ShopByVehicle() {
       subtitle: 'Heavy Commercial Vehicles',
       icon: Truck,
       featured: true,
-      description: 'Comprehensive commercial vehicle support: Ashok Leyland LEYPARTS & VALUEPARTS genuine spare parts alongside heavy-duty diesel engine oils, differential gear oils, hydraulic tipper oils, and wheel bearing greases.',
+      description: 'Comprehensive commercial vehicle support: Ashok Leyland LEYPARTS & VALUEPARTS genuine spare parts alongside heavy-duty diesel engine oils, differential gear oils, hydraulic tipper oils, and wheel bearing greases from all major oil companies.',
       recommendedProducts: [
         'Ashok Leyland Genuine LEYPARTS & VALUEPARTS',
         'Heavy-Duty Diesel Engine Oils (15W-40, 20W-50)',
@@ -77,7 +77,7 @@ export default function ShopByVehicle() {
         'Anti-Wear Hydraulic Oils (AW-46, AW-68) for Tippers',
         'High-Load Wheel Bearing & Chassis Greases',
       ],
-      brands: ['Ashok Leyland LEYPARTS', 'VALUEPARTS', 'Gulf', 'MAK', 'Veedol', 'Eni'],
+      brands: ['Ashok Leyland LEYPARTS', 'VALUEPARTS', 'All Major Oil Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK'],
       whatsappPreset: {
         category: 'Commercial Vehicle Spare Parts & Heavy Oils',
         vehicle: 'Commercial Truck / Tipper / Lorry',
@@ -91,14 +91,14 @@ export default function ShopByVehicle() {
       title: 'Tractors & Equipment',
       subtitle: 'Agricultural & Machinery Fluids',
       icon: Tractor,
-      description: 'Multi-grade tractor engine oils, Universal Tractor Transmission Oils (UTTO), heavy hydraulic system fluids, and water pump & implement greases.',
+      description: 'Multi-grade tractor engine oils, Universal Tractor Transmission Oils (UTTO), heavy hydraulic system fluids, and implement greases from all major oil brands.',
       recommendedProducts: [
         'Multi-Grade Tractor Engine Oils (15W-40, 20W-40)',
         'Universal Tractor Transmission Oils (UTTO)',
         'Hydraulic Lift & Implement Fluids (AW-68)',
         'Water-Resistant Chassis & Bearing Greases',
       ],
-      brands: ['Gulf', 'MAK', 'Veedol'],
+      brands: ['All Major Oil Brands', 'Veedol', 'Gulf', 'MAK', 'Servo', 'Castrol'],
       whatsappPreset: {
         category: 'Tractor & Agricultural Machinery Oils',
         vehicle: 'Tractor / Agricultural Equipment',
@@ -262,7 +262,7 @@ export default function ShopByVehicle() {
                       </div>
                       <div className="summary-spec-item">
                         <span className="spec-label">Location:</span>
-                        <span className="spec-val">Plot No. 167, Auto Nagar, Nellore</span>
+                        <span className="spec-val">Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore</span>
                       </div>
                       <div className="summary-spec-item">
                         <span className="spec-label">Pack Sizes:</span>

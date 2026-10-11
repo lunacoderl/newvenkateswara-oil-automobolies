@@ -92,7 +92,7 @@ export default function Navbar() {
           <div className="top-bar-right">
             <span className="top-bar-loc">
               <MapPin size={13} className="top-icon" aria-hidden="true" />
-              <span>Plot No. 167, Auto Nagar, Nellore</span>
+              <span>{BUSINESS.address.display}</span>
             </span>
             <span className="top-bar-divider" aria-hidden="true">•</span>
             <a href={BUSINESS.phoneHref} className="top-bar-link" aria-label={`Call ${BUSINESS.phone}`}>
@@ -288,7 +288,7 @@ export default function Navbar() {
         <div className="mobile-drawer-footer">
           <div className="drawer-divisions-note">
             <strong>Authorized Ashok Leyland Store</strong>
-            <p>Commercial vehicle spare parts (LEYPARTS) &amp; lubricants (Gulf, Veedol, MAK, Eni)</p>
+            <p>Commercial vehicle spare parts (LEYPARTS) &amp; lubricants from all major companies</p>
           </div>
 
           <a

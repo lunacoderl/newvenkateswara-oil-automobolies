@@ -69,13 +69,13 @@ export default function Footer() {
             </div>
 
             <p className="footer-description">
-              A single automotive enterprise in Auto Nagar, Nellore, operating an <strong>Ashok Leyland Retail Parts Store</strong> (LEYPARTS &amp; VALUEPARTS) alongside an authorized retail counter for <strong>Gulf, Veedol, MAK, and Eni</strong> lubricants.
+              A single automotive enterprise in Auto Nagar, Nellore, operating an <strong>Ashok Leyland Retail Parts Store</strong> (LEYPARTS &amp; VALUEPARTS) alongside an authorized multi-brand retail counter stocking <strong>all major company lubricants</strong> (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and more).
             </p>
 
             <div className="footer-contact-summary">
               <div className="contact-summary-line">
                 <MapPin size={16} aria-hidden="true" />
-                <span>{BUSINESS.address.plot}, {BUSINESS.address.area}, {BUSINESS.address.city}, {BUSINESS.address.state}</span>
+                <span>{BUSINESS.address.plot}, {BUSINESS.address.landmark}, {BUSINESS.address.area}, {BUSINESS.address.city}, {BUSINESS.address.state}</span>
               </div>
               <div className="contact-summary-line">
                 <Phone size={16} aria-hidden="true" />
@@ -180,7 +180,7 @@ export default function Footer() {
       <div className="footer-bottom-bar">
         <div className="container footer-bottom-container">
           <div className="footer-copy-text">
-            &copy; {CURRENT_YEAR} {BUSINESS.name}. All rights reserved. Plot No. 167, Auto Nagar, Nellore, Andhra Pradesh.
+            &copy; {CURRENT_YEAR} {BUSINESS.name}. All rights reserved. Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh.
           </div>
 
           <div className="footer-legal-links">

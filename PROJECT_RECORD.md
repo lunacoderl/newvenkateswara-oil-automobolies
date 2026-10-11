@@ -2,13 +2,13 @@
 
 ## Project Overview
 - **Business Name**: New Venkateswara Oil & Automobiles
-- **Location**: Plot No. 167, Auto Nagar, Nellore, Andhra Pradesh, India
+- **Location**: Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh, India
 - **Contact Number**: 9440529777
 - **Direct Phone Link**: `tel:9440529777`
 - **WhatsApp**: `+91 94405 29777` (`https://wa.me/919440529777`)
 - **Business Identity**: Single automotive products enterprise in Auto Nagar, Nellore, with TWO equally prominent divisions:
   1. Commercial Vehicle Spare Parts (Ashok Leyland Retail Parts Store / LEYPARTS / VALUEPARTS)
-  2. Automotive Oils, Lubricants & Grease (Gulf, Veedol, MAK, Eni, and lubricating greases)
+  2. Automotive Oils, Lubricants & Grease (All Major Oil Companies: Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HPCL, and more)
 - **Target Audience**: Commercial vehicle owners, truck operators, fleet businesses, workshops/mechanics, and individual motorists.
 - **Technology Stack**: React 19 + Vite 8, React Router DOM v7, Lucide React, Clean Vanilla CSS retail design system, Mobile-first responsive layout, Vercel SPA deployment ready.
 
@@ -602,6 +602,88 @@ User reported that on mobile devices, the site appeared "zoomed in" and required
 - **Modified Files**:
   - `README.md`: Updated title and repository folder structure.
   - `PROJECT_RECORD.md`: Updated audit log.
+- **Created Files**: None.
+- **Deleted Files**: None.
+
+---
+
+## All Major Oil Companies Representation & Landmark (Near Ayyappa Temple) Integration (2026-10-11)
+
+### 1. Requirements Addressed
+- **Oils & Lubricants (Division 2)**:
+  - Do not single out or isolate particular oil brands.
+  - Comprehensively represent **all major oil companies**: Castrol, Gulf, Shell, Mobil, Servo (IOCL), MAK (BPCL), Veedol, HPCL, Motul, and other recognized manufacturers.
+  - Emphasize multi-brand availability across all categories: Heavy Diesel Engine Oils, Passenger Car & 4T/2T Bike Oils, Transmission/Gear Oils (GL-4 & GL-5), Hydraulic Fluids (ISO VG 46/68), and Wheel Bearing / Chassis Greases.
+- **Location Landmark ("Near Ayyappa Temple")**:
+  - Incorporate the primary local landmark **"Near Ayyappa Temple"** across all address occurrences.
+  - Update physical counter descriptions, mobile strip, footer, schema.org structured data, and Google Maps query strings to ensure accurate physical routing and navigation for customers, drivers, and transport operators.
+
+### 2. Comprehensive Implementation Details
+1. **Business Data & WhatsApp Model (`src/data/business.js`)**:
+   - Added `landmark: "Near Ayyappa Temple"`.
+   - Updated display address: `"Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore"`.
+   - Updated full address: `"Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh - 524004, India"`.
+   - Updated Google Maps query URL: `https://www.google.com/maps/search/?api=1&query=New+Venkateswara+Oil+Automobiles+Plot+167+Near+Ayyappa+Temple+Auto+Nagar+Nellore`.
+   - Updated `signageBrands` to include `"All Major Oil Companies"` alongside `"Ashok Leyland Retail Parts Store"`, `"LEYPARTS"`, and `"VALUEPARTS"`.
+   - Updated WhatsApp pre-filled enquiry generator to embed `📍 Location: Near Ayyappa Temple, Auto Nagar, Nellore`.
+2. **Product Catalog & Services Data (`src/data/services.js`)**:
+   - Updated `engine-oil`, `gear-oil`, `hydraulic-oil`, and `lubricating-grease` entries.
+   - Broadened `relevantBrands` to include `["All Major Brands", "Castrol", "Gulf", "Shell", "Mobil", "Servo", "MAK", "Veedol", "HPCL"]`.
+   - Updated verified products, guidance, FAQs, and SEO descriptions to reflect genuine multi-brand coverage and the `Near Ayyappa Temple` landmark.
+3. **Hero Section (`src/components/HeroSection.jsx`)**:
+   - Updated `.mobile-store-strip` location label to `"Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore"`.
+   - Updated screen-reader accessibility / SEO grounding paragraph to feature `Near Ayyappa Temple` and all major oil companies.
+4. **Brand Showcase (`src/components/BrandShowcase.jsx`)**:
+   - Overhauled Division 2 from narrow 4-card layout to "All Major Oil Companies Stocked" showcasing Castrol, Gulf, Shell & Mobil, Servo (IOCL) & MAK (BPCL), Veedol, HP & Motul, and All Leading Companies.
+   - Updated trademark notice and location summary with `Near Ayyappa Temple`.
+5. **Shop By Product (`src/components/ShopByProduct.jsx`)**:
+   - Replaced individual brand pills with `['All Major Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK', 'Mobil']` across Engine Oil, Gear Oil, Hydraulic Oil, and Lubricating Grease.
+   - Updated Division 2 title to `All Major Oil Companies: Engine Oils, Gear Oils & Greases`.
+6. **Shop By Vehicle (`src/components/ShopByVehicle.jsx`)**:
+   - Updated brand arrays for Bikes & Scooters, Cars & Commercial Vans, Lorries & Trucks, and Tractors & Heavy Machinery to feature all major oil companies.
+   - Updated summary card location specification to `Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore`.
+7. **About Section (`src/components/AboutSection.jsx`)**:
+   - Updated storefront image location pill and lead description to `Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore`.
+   - Updated Division 2 description to highlight factory-sealed lubricants from all major petroleum companies.
+8. **Navigation Bar (`src/components/Navbar.jsx`)**:
+   - Updated top header location strip to display `{BUSINESS.address.display}` (*"Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore"*).
+   - Updated mobile drawer note to highlight lubricants from all major companies.
+9. **Contact & Location Section (`src/components/ContactSection.jsx`)**:
+   - Added dedicated `.card-item-landmark` badge: `Landmark: Near Ayyappa Temple`.
+   - Updated map title bar: `Google Maps Location · Near Ayyappa Temple, Auto Nagar, Nellore`.
+   - Updated Google Maps embed iframe query to `Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore`.
+10. **Part Enquiry Section (`src/components/PartEnquirySection.jsx`)**:
+    - Updated physical counter box landmark to `Landmark: Near Ayyappa Temple`.
+    - Updated lubricant advice helper card to `"All Major Oil Companies Stocked"` with tags for All Major Brands, Castrol, Gulf, Shell, Mobil, Servo (IOCL), MAK (BPCL), Veedol, HPCL, Motul & Eni.
+11. **Footer (`src/components/Footer.jsx`)**:
+    - Updated enterprise summary to `"authorized multi-brand retail counter stocking all major company lubricants"`.
+    - Added `{BUSINESS.address.landmark}` to footer address summary.
+    - Updated copyright line to `Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh`.
+12. **Home Page & SEO Metadata (`src/pages/Home.jsx`)**:
+    - Updated `localBusinessSchema` street address to `${BUSINESS.address.plot}, ${BUSINESS.address.landmark}`.
+    - Updated description and meta description to reference `Near Ayyappa Temple` and all major oil companies.
+13. **Design Tokens & Styles (`src/styles/home.css`)**:
+    - Added styling for `.card-item-landmark` badge (high-contrast pill with deep blue accent).
+14. **Documentation (`README.md` & `PROJECT_RECORD.md`)**:
+    - Updated business details and repository clone guidelines.
+
+### 3. File Modification Log
+- **Modified Files**:
+  - `src/data/business.js`
+  - `src/data/services.js`
+  - `src/components/BrandShowcase.jsx`
+  - `src/components/ShopByProduct.jsx`
+  - `src/components/ShopByVehicle.jsx`
+  - `src/components/AboutSection.jsx`
+  - `src/components/Navbar.jsx`
+  - `src/components/HeroSection.jsx`
+  - `src/components/ContactSection.jsx`
+  - `src/components/PartEnquirySection.jsx`
+  - `src/components/Footer.jsx`
+  - `src/pages/Home.jsx`
+  - `src/styles/home.css`
+  - `README.md`
+  - `PROJECT_RECORD.md`
 - **Created Files**: None.
 - **Deleted Files**: None.
 

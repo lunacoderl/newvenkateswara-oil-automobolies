@@ -41,9 +41,9 @@ export default function HeroSection() {
             <h1>Automotive Spare Parts &amp; Lubricants in Nellore</h1>
             <p>For Bikes, Cars, Lorries, Trucks and More</p>
             <p>
-              New Venkateswara Oil &amp; Automobiles is located at Plot No. 167, Auto Nagar, Nellore, Andhra Pradesh.
-              Authorized Ashok Leyland Retail Parts Store (LEYPARTS &amp; VALUEPARTS) and genuine distributor stock
-              for Gulf, MAK, Veedol, and Eni automotive lubricants. Call 9440529777.
+              New Venkateswara Oil &amp; Automobiles is located at Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore, Andhra Pradesh.
+              Authorized Ashok Leyland Retail Parts Store (LEYPARTS &amp; VALUEPARTS) and genuine stock
+              from all major petroleum and automotive lubricant companies. Call 9440529777.
             </p>
           </div>
 
@@ -180,7 +180,7 @@ export default function HeroSection() {
         <div className="mobile-store-strip">
           <div className="store-strip-item">
             <MapPin size={14} className="strip-icon" aria-hidden="true" />
-            <span>Plot No. 167, Auto Nagar, Nellore</span>
+            <span>Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore</span>
           </div>
           <div className="store-strip-item">
             <ShieldCheck size={14} className="strip-icon" aria-hidden="true" />
