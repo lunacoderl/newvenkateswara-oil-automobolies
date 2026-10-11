@@ -392,6 +392,69 @@ User reported that on mobile devices, the site appeared "zoomed in" and required
 
 ---
 
+## Full-Screen Hero Section Redesign & Typography Overhaul (2026-10-11)
+
+### 1. Requirements Addressed
+1. **Full-Screen Hero Image**: Transform the previous 2-column boxed card layout into an edge-to-edge, full-screen hero banner visual.
+2. **Exact Mockup Fidelity (Desktop & Mobile)**: The hero section precisely replicates the client-provided visual mockup across both desktop monitors and mobile phone screens without cropping or distortion.
+3. **Typography Transformation**: Replace the previous condensed font (`Barlow Condensed`) and `Inter` with modern, geometric, premium sans-serif typography (`Plus Jakarta Sans`) across the entire website.
+
+### 2. Implementation Details
+
+#### Typography Overhaul (`Plus Jakarta Sans`)
+- **`index.html`**:
+  - Replaced Google Fonts preconnect/link with `Plus Jakarta Sans` weights `400, 500, 600, 700, 800` (including italics).
+- **`src/styles/tokens.css`**:
+  - Set `--font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;`.
+  - Set `--font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;`.
+- **`src/styles/global.css`**:
+  - Refined `.font-display` and `.heading-section` letter-spacing (`-0.01em` to `-0.02em`) and relaxed forced uppercase for a modern, crisp automotive aesthetic.
+
+#### Full-Screen Hero Banner (`HeroSection.jsx` & `home.css`)
+- **Assets Created**:
+  - `public/images/hero-banner.jpg`: 1024x576 client mockup banner.
+  - `public/images/hero-banner-hd.jpg`: Crisp 1920x1080 high-definition banner (LANCZOS-resampled with subtle detail enhancement and 95 quality).
+- **Visual Structure & Responsiveness**:
+  - Desktop: Edge-to-edge full-bleed hero container (`.hero-fullscreen-section`) with radial deep gradient backdrop, responsive 16:9 stage (`.hero-banner-stage`), and viewport height optimization.
+  - Mobile: Full width without horizontal crop or zoom distortion, preserving 100% of the storefront, truck, vehicles, products, headline, and badges.
+- **Interactive Hotspots (Precise Percentage Geometry)**:
+  - **Top-Right Vehicle Category Badges**:
+    - Bikes & Scooters: `left: 58.5%`, `top: 2.2%`, `width: 8.8%`, `height: 17.5%`
+    - Cars: `left: 68.8%`, `top: 2.2%`, `width: 8.2%`, `height: 17.5%`
+    - Lorries & Trucks: `left: 77.8%`, `top: 2.2%`, `width: 9.2%`, `height: 17.5%`
+    - Tractors: `left: 87.8%`, `top: 2.2%`, `width: 8.5%`, `height: 17.5%`
+  - **Bottom-Left Primary Action Buttons**:
+    - Call Now (`tel:9440529777`): `left: 3.2%`, `top: 82.2%`, `width: 15.2%`, `height: 11.2%` with golden glow on hover/focus.
+    - WhatsApp Enquiry: `left: 19.2%`, `top: 82.2%`, `width: 18.2%`, `height: 11.2%` with glass green glow on hover/focus.
+- **Mobile Quick Action Bar (`.hero-mobile-action-bar`)**:
+  - Two prominent 48px thumb touch buttons: Yellow Call (`tel:9440529777`) and WhatsApp Enquiry.
+  - Horizontally scrollable vehicle category selector pills (`Bikes & Scooters`, `Cars`, `Lorries & Trucks`, `Tractors`).
+  - Store verification badge (`Plot No. 167, Auto Nagar, Nellore · Ashok Leyland Retail Parts Store`).
+- **Synchronized Vehicle Category Switching (`ShopByVehicle.jsx`)**:
+  - Added `useEffect` listening for `#vehicle-bikes`, `#vehicle-cars`, `#vehicle-trucks`, `#vehicle-tractors` hash changes to smoothly scroll and activate the corresponding tab.
+- **Accessibility & Technical SEO**:
+  - Grounded with `.sr-only` semantic markup containing `<h1>Automotive Spare Parts & Lubricants in Nellore</h1>`, subtitle, and business details for search engine indexation and screen reader accessibility.
+
+### 3. File Modification Log
+- **Created Files**:
+  - `public/images/hero-banner.jpg` (Original mockup banner, 433 KB)
+  - `public/images/hero-banner-hd.jpg` (1920x1080 HD banner, 95 quality)
+- **Modified Files**:
+  - `index.html` (Swapped to Plus Jakarta Sans Google Fonts)
+  - `src/styles/tokens.css` (Updated `--font-body` and `--font-display`)
+  - `src/styles/global.css` (Updated heading styles and font metrics)
+  - `src/components/HeroSection.jsx` (Full-screen hero banner with responsive hotspots and mobile action bar)
+  - `src/styles/home.css` (Replaced `.hero-retail-section` with `.hero-fullscreen-section` styles)
+  - `src/components/ShopByVehicle.jsx` (Added hash-based vehicle tab switching)
+  - `PROJECT_RECORD.md` (Project audit log updated)
+- **Deleted Files**: None.
+
+### 4. Verification & QA
+- **Linter (`oxlint`)**: 0 warnings, 0 errors across 35 files.
+- **Vite Build (`npm run build`)**: Succeeded cleanly with zero errors (built in 7.67s).
+
+---
+
 ## Remaining Business Information to be Confirmed with Client
 
 The website is fully functional, accurate, and completely grounded in verified storefront facts. To further enhance future iterations, the following operational details may be confirmed with the owner:
@@ -399,5 +462,6 @@ The website is fully functional, accurate, and completely grounded in verified s
 2. **Additional Transport Equipment Brands**: Confirmation if specific tractor brands (e.g. Mahindra, Swaraj) or commercial vehicle brands (e.g. Tata, BharatBenz) are stocked in addition to the prominent Ashok Leyland inventory.
 3. **Dedicated Landline or Secondary Mobile**: Whether an alternate telephone line exists in addition to the primary confirmed mobile (`9440529777`).
 4. **GST / Invoice Details**: Whether B2B tax invoice numbers or GSTIN should be displayed on commercial fleet enquiry documentation.
+
 
 

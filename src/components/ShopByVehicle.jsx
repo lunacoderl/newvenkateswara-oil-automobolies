@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Bike, Car, Truck, Tractor, ArrowRight, MessageSquare, Phone } from 'lucide-react';
 import { BUSINESS, buildWhatsAppEnquiryUrl } from '../data/business';
 
 export default function ShopByVehicle() {
   const [activeVehicle, setActiveVehicle] = useState('trucks');
+
+  useEffect(() => {
+    const handleHash = () => {
+      const h = window.location.hash.toLowerCase();
+      if (h.includes('bikes')) setActiveVehicle('bikes');
+      else if (h.includes('cars')) setActiveVehicle('cars');
+      else if (h.includes('trucks')) setActiveVehicle('trucks');
+      else if (h.includes('tractors')) setActiveVehicle('tractors');
+    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   const vehicleCategories = [
     {
