@@ -35,8 +35,14 @@ export default function BrandShowcase() {
     },
     {
       division: 'Automotive Oils & Lubricants',
-      badge: 'All Major Oil Companies Stocked',
+      badge: 'Official ENI Distributors & All Major Oil Companies',
       brands: [
+        {
+          name: 'ENI Lubricants',
+          role: 'Official Distributors for Nellore',
+          status: 'Authorized Distributor Stock',
+          description: 'Official distributor for ENI lubricants in Nellore. Supplying genuine Italian-engineered lubricants, i-Sint motor oils, i-Sigma commercial fleet diesel oils, Rotra gear oils, Arnica hydraulic fluids, and specialty greases.',
+        },
         {
           name: 'Castrol',
           role: 'Leading Automotive & Commercial Brand',
@@ -62,21 +68,15 @@ export default function BrandShowcase() {
           description: 'Heavy commercial diesel lubricants, anti-wear hydraulic tipper fluids, and extreme-pressure chassis greases.',
         },
         {
-          name: 'Veedol, HP & Motul',
-          role: 'Proven Automotive Formulations',
-          status: '100% Genuine Sealed Stock',
-          description: 'Multigrade diesel lubricants, tractor & agricultural equipment oils, and high-performance motorcycle oils.',
-        },
-        {
           name: 'All Leading Companies',
           role: 'Complete Multi-Brand Availability',
           status: 'All Pack Sizes In Stock',
-          description: 'We stock genuine products from all major oil companies. Whatever brand your engine or gearbox requires, we supply at counter rates.',
+          description: 'As official ENI distributors and multi-brand stockists, we maintain full inventory across all leading oil companies in factory-sealed containers at counter and bulk rates.',
         },
       ],
-      image: '/images/lubricant-gulf-supremefleet.jpg',
-      imageAlt: 'Real multi-brand commercial and automotive lubricants inventory at Auto Nagar, Nellore',
-      imageCaption: 'Genuine sealed lubricants inventory from all major oil companies at Auto Nagar, Nellore',
+      image: '/images/lubricant-eni-isint-synthetic.jpg',
+      imageAlt: 'ENI lubricants distributor inventory and genuine multi-brand commercial lubricants at Auto Nagar, Nellore',
+      imageCaption: 'Official ENI Lubricants distributor stock & all major oil companies at Auto Nagar, Nellore',
     },
   ];
 
@@ -150,8 +150,8 @@ export default function BrandShowcase() {
           <div className="notice-content">
             <strong>Authenticity &amp; Trademark Clarification:</strong>
             <p>
-              New Venkateswara Oil &amp; Automobiles is an independent automotive retail enterprise located at Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore. 
-              Our storefront displays signage for Ashok Leyland Retail Parts Store, LEYPARTS, and VALUEPARTS, and our inventory contains genuine packaged lubricants from all major petroleum and oil companies. 
+              New Venkateswara Oil &amp; Automobiles is an authorized distributor for ENI lubricants in Nellore and operates an Ashok Leyland Retail Parts Store (LEYPARTS &amp; VALUEPARTS) at Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore. 
+              Our inventory also contains genuine packaged lubricants from all major petroleum and oil companies. 
               All logos, brand names, and trademarks belong to their respective manufacturers.
             </p>
           </div>

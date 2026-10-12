@@ -379,8 +379,9 @@ export default function PartEnquirySection() {
 
               <div className="journey-helper-col">
                 <div className="helper-card">
-                  <h4 className="helper-title">All Major Oil Companies Stocked:</h4>
+                  <h4 className="helper-title">Official ENI Distributors &amp; All Major Oil Companies:</h4>
                   <div className="helper-brands-tags">
+                    <span className="brand-tag brand-tag-highlight">★ ENI (Official Distributors)</span>
                     <span className="brand-tag">All Major Brands</span>
                     <span className="brand-tag">Castrol</span>
                     <span className="brand-tag">Gulf</span>
@@ -390,10 +391,10 @@ export default function PartEnquirySection() {
                     <span className="brand-tag">MAK (BPCL)</span>
                     <span className="brand-tag">Veedol</span>
                     <span className="brand-tag">HPCL</span>
-                    <span className="brand-tag">Motul &amp; Eni</span>
+                    <span className="brand-tag">Motul</span>
                   </div>
                   <div className="helper-notice">
-                    We stock original lubricants from all leading oil companies in genuine, factory-sealed containers with verifiable manufacturer tamper-evident seals.
+                    Official distributors for ENI lubricants in Nellore alongside genuine products from all major oil companies in factory-sealed containers.
                   </div>
                 </div>
               </div>
@@ -472,6 +473,10 @@ export default function PartEnquirySection() {
                     <li>
                       <span className="step-num">✓</span>
                       <span>Combined supply for both mechanical spares and lubrication fluids.</span>
+                    </li>
+                    <li>
+                      <span className="step-num">✓</span>
+                      <span>Official ENI Lubricants Distributors for Nellore — bulk pails, barrels &amp; fleet discount supply.</span>
                     </li>
                     <li>
                       <span className="step-num">✓</span>

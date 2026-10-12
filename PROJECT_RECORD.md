@@ -8,7 +8,7 @@
 - **WhatsApp**: `+91 94405 29777` (`https://wa.me/919440529777`)
 - **Business Identity**: Single automotive products enterprise in Auto Nagar, Nellore, with TWO equally prominent divisions:
   1. Commercial Vehicle Spare Parts (Ashok Leyland Retail Parts Store / LEYPARTS / VALUEPARTS)
-  2. Automotive Oils, Lubricants & Grease (All Major Oil Companies: Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HPCL, and more)
+  2. Automotive Oils, Lubricants & Grease (Official ENI Lubricants Distributors for Nellore & All Major Oil Companies: Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HPCL, and more)
 - **Target Audience**: Commercial vehicle owners, truck operators, fleet businesses, workshops/mechanics, and individual motorists.
 - **Technology Stack**: React 19 + Vite 8, React Router DOM v7, Lucide React, Clean Vanilla CSS retail design system, Mobile-first responsive layout, Vercel SPA deployment ready.
 
@@ -682,6 +682,78 @@ User reported that on mobile devices, the site appeared "zoomed in" and required
   - `src/components/Footer.jsx`
   - `src/pages/Home.jsx`
   - `src/styles/home.css`
+  - `README.md`
+  - `PROJECT_RECORD.md`
+- **Created Files**: None.
+- **Deleted Files**: None.
+
+---
+
+## ENI Lubricants Distributors for Nellore Integration (2026-10-12)
+
+### 1. Requirements Addressed
+- Explicitly add business qualification: **ENI Lubricants Distributors for Nellore** across all customer touchpoints on the website.
+- Seamlessly balance both official identities:
+  1. **Ashok Leyland Retail Parts Store** (Commercial Vehicle Spares, LEYPARTS, VALUEPARTS).
+  2. **Official ENI Lubricants Distributors for Nellore** alongside comprehensive multi-brand availability for all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HPCL).
+
+### 2. Implementation Details
+1. **Business Configuration (`src/data/business.js`)**:
+   - Added dedicated `distributor` configuration:
+     - `title: "ENI Lubricants Distributors for Nellore"`
+     - `shortTitle: "ENI Lubricants Distributors"`
+     - `region: "Nellore District & Surrounding Regions"`
+     - `description: "Official distributors for ENI lubricants in Nellore — supplying genuine automotive engine oils, synthetic motor lubricants, gear oils, hydraulic fluids, and greases for retail customers, transport fleets, and workshops."`
+   - Added `ENI Lubricants Distributors for Nellore` to `signageBrands` with `featured: true`.
+   - Updated Division 2 title: `"ENI Lubricants Distributors & All Major Oil Companies"`.
+2. **Navbar (`src/components/Navbar.jsx`)**:
+   - Updated top header status badge: `Ashok Leyland Retail Parts Store · ENI Lubricants Distributors for Nellore`.
+   - Updated mobile drawer notice: `Ashok Leyland Store & ENI Lubricants Distributors` with full regional distribution note.
+3. **Hero Section (`src/components/HeroSection.jsx`)**:
+   - Updated screen reader / SEO accessibility paragraph: `Official ENI Lubricants Distributors for Nellore and Authorized Ashok Leyland Retail Parts Store (LEYPARTS & VALUEPARTS)...`
+   - Updated `.mobile-store-strip` verification tag: `ENI Lubricants Distributors for Nellore · Ashok Leyland Parts`.
+4. **Brand Showcase (`src/components/BrandShowcase.jsx`)**:
+   - Positioned **ENI Lubricants** as the lead featured brand with role `Official Distributors for Nellore` and status `Authorized Distributor Stock`.
+   - Updated Division 2 badge to `Official ENI Distributors & All Major Oil Companies`.
+   - Highlighted ENI Italian-engineered lubricants: i-Sint synthetic motor oils, i-Sigma commercial fleet oils, Rotra gear oils, Arnica hydraulic oils, and specialty greases.
+   - Updated real photograph to `/images/lubricant-eni-isint-synthetic.jpg` and updated caption and trademark notices.
+5. **Shop by Product (`src/components/ShopByProduct.jsx`)**:
+   - Updated Division 2 header: `— ENI Lubricants Distributors for Nellore & All Major Oil Companies`.
+   - Updated categories to display `ENI (Distributors)` as lead brand badge across Engine Oil, Gear Oil, Hydraulic Oil, and Lubricating Grease.
+6. **Shop by Vehicle (`src/components/ShopByVehicle.jsx`)**:
+   - Added `ENI (Distributors)` to brand badges for Cars, Trucks, and Tractors.
+7. **About Store (`src/components/AboutSection.jsx`)**:
+   - Updated Division 2 profile to highlight `Official ENI Lubricants Distributors for Nellore`.
+   - Added trust principle: `Official ENI Lubricants Distributors for Nellore district`.
+8. **Contact Section (`src/components/ContactSection.jsx`)**:
+   - Updated storefront card title: `Ashok Leyland Retail Parts Store & ENI Lubricants Distributors for Nellore`.
+9. **Footer (`src/components/Footer.jsx`)**:
+   - Updated enterprise overview to feature official ENI Lubricants Distributors for Nellore.
+10. **Part Enquiry Section (`src/components/PartEnquirySection.jsx`)**:
+    - Added `★ ENI (Official Distributors)` highlight badge to Lubricant Selection helper card.
+    - Added fleet discount & bulk barrel supply highlight for ENI lubricants.
+11. **Services Data Model (`src/data/services.js`)**:
+    - Added official distributor stock products for ENI High-Performance Engine Oils, ENI Rotra Gear Oils, ENI Arnica & Acer Hydraulic Fluids, and ENI Greases.
+    - Added dedicated FAQ regarding authorized ENI distribution in Nellore.
+12. **SEO & Home Page (`src/pages/Home.jsx`)**:
+    - Updated `localBusinessSchema` description and page title: `New Venkateswara Oil & Automobiles | ENI Lubricants Distributors & Commercial Spares in Nellore`.
+13. **Documentation (`README.md` & `PROJECT_RECORD.md`)**:
+    - Updated business overview and legal disclaimers.
+
+### 3. File Modification Log
+- **Modified Files**:
+  - `src/data/business.js`
+  - `src/data/services.js`
+  - `src/components/Navbar.jsx`
+  - `src/components/HeroSection.jsx`
+  - `src/components/BrandShowcase.jsx`
+  - `src/components/ShopByProduct.jsx`
+  - `src/components/ShopByVehicle.jsx`
+  - `src/components/AboutSection.jsx`
+  - `src/components/ContactSection.jsx`
+  - `src/components/Footer.jsx`
+  - `src/components/PartEnquirySection.jsx`
+  - `src/pages/Home.jsx`
   - `README.md`
   - `PROJECT_RECORD.md`
 - **Created Files**: None.

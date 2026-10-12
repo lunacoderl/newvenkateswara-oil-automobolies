@@ -22,7 +22,19 @@ export const BUSINESS = {
     display: "Plot No. 167, Near Ayyappa Temple, Auto Nagar, Nellore",
   },
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Plot+No.+167,+Near+Ayyappa+Temple,+Auto+Nagar,+Nellore,+Andhra+Pradesh,+India",
+  distributor: {
+    title: "ENI Lubricants Distributors for Nellore",
+    shortTitle: "ENI Lubricants Distributors",
+    region: "Nellore District & Surrounding Regions",
+    description: "Official distributors for ENI lubricants in Nellore — supplying genuine automotive engine oils, synthetic motor lubricants, gear oils, hydraulic fluids, and greases for retail customers, transport fleets, and workshops.",
+  },
   signageBrands: [
+    {
+      name: "ENI Lubricants Distributors for Nellore",
+      label: "Official Regional Distributors",
+      category: "lubricants",
+      featured: true,
+    },
     {
       name: "Ashok Leyland Retail Parts Store",
       label: "Commercial Vehicle Parts",
@@ -56,9 +68,9 @@ export const BUSINESS = {
     },
     {
       id: "lubricants",
-      title: "All Major Company Oils & Lubricants",
+      title: "ENI Lubricants Distributors & All Major Oil Companies",
       shortTitle: "Oils & Lubricants",
-      description: "Stocking genuine engine oils, gear oils, hydraulic fluids, and greases from all major oil companies. Enquire for specifications and pack sizes.",
+      description: "Official ENI Lubricants Distributors for Nellore alongside genuine engine oils, gear oils, hydraulic fluids, and greases from all major oil companies. Fleet and retail supply.",
       ctaText: "EXPLORE LUBRICANTS",
       anchor: "#lubricants",
       route: "/services/engine-oil",

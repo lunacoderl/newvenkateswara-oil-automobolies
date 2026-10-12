@@ -85,7 +85,7 @@ export default function AboutSection() {
                 <div>
                   <h3 className="division-card-title">Automotive Oils, Lubricants &amp; Greases</h3>
                   <p className="division-card-desc">
-                    Comprehensive selection of multi-grade engine oils, extreme pressure gear oils, hydraulic tipper fluids, and chassis greases from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HP, Motul, and more).
+                    Official <strong>ENI Lubricants Distributors for Nellore</strong> alongside a comprehensive stock of multi-grade engine oils, gear oils, hydraulic tipper fluids, and chassis greases from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and more).
                   </p>
                 </div>
               </div>
@@ -95,6 +95,10 @@ export default function AboutSection() {
             <div className="about-principles-list">
               <h4 className="principles-title">Why Customers Trust Our Counter:</h4>
               <div className="principles-grid">
+                <div className="principle-item">
+                  <CheckCircle2 size={16} className="principle-icon" aria-hidden="true" />
+                  <span>Official ENI Lubricants Distributors for Nellore district.</span>
+                </div>
                 <div className="principle-item">
                   <CheckCircle2 size={16} className="principle-icon" aria-hidden="true" />
                   <span>Physical walk-in counter in Auto Nagar industrial area.</span>

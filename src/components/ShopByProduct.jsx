@@ -28,12 +28,12 @@ export default function ShopByProduct() {
       title: 'Automotive & Heavy-Duty Engine Oils',
       shortTitle: 'Engine Oils',
       icon: Droplets,
-      badge: 'All Major Oil Companies',
+      badge: 'ENI Distributors · Major Brands',
       image: '/images/lubricant-gulf-supremefleet.jpg',
       imageAlt: 'Multi-brand commercial diesel engine oils and automotive lubricants packaging at Auto Nagar, Nellore',
-      description: 'High-performance engine oils from all major oil companies for two-wheelers, passenger cars, tractors, and heavy commercial diesel fleets.',
+      description: 'Official ENI Lubricants distributor stock alongside high-performance engine oils from all major oil companies for two-wheelers, passenger cars, tractors, and heavy commercial diesel fleets.',
       keyItems: ['Commercial Diesel 15W-40 & 20W-50', 'Bike 4T & 2T Motorcycle Oils', 'Passenger Car Synthetic & Mineral', 'Heavy Haulage Engine Fluids'],
-      brands: ['All Major Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK', 'Mobil'],
+      brands: ['ENI (Distributors)', 'All Major Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK', 'Mobil'],
       isSpareParts: false,
     },
     {
@@ -42,12 +42,12 @@ export default function ShopByProduct() {
       title: 'Gear & Axle Transmission Oils',
       shortTitle: 'Gear & Axle Oils',
       icon: Gauge,
-      badge: 'Extreme Pressure EP',
+      badge: 'ENI Rotra · Extreme Pressure EP',
       image: '/images/lubricant-eni-isint-synthetic.jpg',
       imageAlt: 'Heavy transmission and differential gear oils from major manufacturers at Auto Nagar, Nellore',
-      description: 'Extreme pressure (EP) gear lubricants from leading oil companies protecting manual transmissions and heavy differentials under high load.',
+      description: 'Extreme pressure (EP) gear lubricants from ENI and leading oil companies protecting manual transmissions and heavy differentials under high load.',
       keyItems: ['EP-90 Extreme Pressure Gear Oil', 'EP-140 & 85W-140 Heavy Differential Oil', '80W-90 Multi-Purpose Gear Fluid', 'Manual Gearbox Lubricants'],
-      brands: ['All Major Brands', 'Castrol', 'Gulf', 'Servo', 'MAK', 'Shell', 'Veedol'],
+      brands: ['ENI (Distributors)', 'All Major Brands', 'Castrol', 'Gulf', 'Servo', 'MAK', 'Shell', 'Veedol'],
       isSpareParts: false,
     },
     {
@@ -56,12 +56,12 @@ export default function ShopByProduct() {
       title: 'Anti-Wear Hydraulic Oils',
       shortTitle: 'Hydraulic Oils',
       icon: Disc,
-      badge: 'Anti-Wear AW-46 & AW-68',
+      badge: 'ENI Arnica · AW-46 & AW-68',
       image: '/images/lubricant-mak-hydrol-aw68.jpg',
       imageAlt: 'Anti-wear hydraulic oils for tippers, machinery, and tractors at Auto Nagar, Nellore',
-      description: 'Specialized hydraulic fluids from all leading companies formulated for hydraulic tippers, lifting rams, and agricultural tractors.',
+      description: 'Specialized hydraulic fluids from ENI and all leading companies formulated for hydraulic tippers, lifting rams, and agricultural tractors.',
       keyItems: ['AW-46 Anti-Wear Hydraulic Fluid', 'AW-68 Heavy Tipper Hydraulic Oil', 'Tractor Hydraulic & Lift Fluids', 'Industrial Equipment Hydraulics'],
-      brands: ['All Major Brands', 'MAK', 'Servo', 'Gulf', 'Castrol', 'HPCL'],
+      brands: ['ENI (Distributors)', 'All Major Brands', 'MAK', 'Servo', 'Gulf', 'Castrol', 'HPCL'],
       isSpareParts: false,
     },
     {
@@ -70,12 +70,12 @@ export default function ShopByProduct() {
       title: 'Automotive Lubricating Grease',
       shortTitle: 'Lubricating Grease',
       icon: ShieldAlert,
-      badge: 'High-Temp Lithium EP',
+      badge: 'ENI & High-Temp Lithium EP',
       image: '/images/lubricant-grease-hro-ap3.jpg',
       imageAlt: 'Automotive wheel bearing and chassis lubricating greases from leading manufacturers at Auto Nagar, Nellore',
-      description: 'High melting point lithium base and EP greases from major oil brands for automotive wheel bearings, chassis lubrication, and heavy kingpins.',
+      description: 'High melting point lithium base and EP greases from ENI and major oil brands for automotive wheel bearings, chassis lubrication, and heavy kingpins.',
       keyItems: ['Wheel Bearing Lithium EP-2 / EP-3', 'Chassis & Suspension Grease', 'High-Temperature Commercial Grease', 'Water-Resistant Multi-Purpose Grease'],
-      brands: ['All Major Brands', 'Castrol', 'Servo', 'Gulf', 'MAK', 'Mobil'],
+      brands: ['ENI (Distributors)', 'All Major Brands', 'Castrol', 'Servo', 'Gulf', 'MAK', 'Mobil'],
       isSpareParts: false,
     },
   ];
@@ -106,7 +106,7 @@ export default function ShopByProduct() {
           <div className="division-col lubricants-col">
             <span className="division-indicator-dot lubricants-dot"></span>
             <strong>Division 2: Automotive Oils &amp; Lubricants</strong>
-            <span className="division-subtext">— All Major Oil Companies: Engine Oils, Gear Oils &amp; Greases</span>
+            <span className="division-subtext">— ENI Lubricants Distributors for Nellore &amp; All Major Oil Companies</span>
           </div>
         </div>
 

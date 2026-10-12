@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
 
             <p className="footer-description">
-              A single automotive enterprise in Auto Nagar, Nellore, operating an <strong>Ashok Leyland Retail Parts Store</strong> (LEYPARTS &amp; VALUEPARTS) alongside an authorized multi-brand retail counter stocking <strong>all major company lubricants</strong> (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and more).
+              A single automotive enterprise in Auto Nagar, Nellore, operating an <strong>Ashok Leyland Retail Parts Store</strong> (LEYPARTS &amp; VALUEPARTS) alongside official <strong>ENI Lubricants Distributors for Nellore</strong>, stocking all major company lubricants (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and more).
             </p>
 
             <div className="footer-contact-summary">

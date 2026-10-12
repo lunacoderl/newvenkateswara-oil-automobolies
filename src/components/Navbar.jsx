@@ -85,7 +85,7 @@ export default function Navbar() {
             <span className="top-bar-divider" aria-hidden="true">•</span>
             <span className="top-bar-auth">
               <ShieldCheck size={14} className="top-icon" aria-hidden="true" />
-              <span>Ashok Leyland Retail Parts Store · LEYPARTS</span>
+              <span>Ashok Leyland Retail Parts Store · ENI Lubricants Distributors for Nellore</span>
             </span>
           </div>
 
@@ -287,8 +287,8 @@ export default function Navbar() {
         {/* Mobile Drawer Direct Contact Actions */}
         <div className="mobile-drawer-footer">
           <div className="drawer-divisions-note">
-            <strong>Authorized Ashok Leyland Store</strong>
-            <p>Commercial vehicle spare parts (LEYPARTS) &amp; lubricants from all major companies</p>
+            <strong>Ashok Leyland Store &amp; ENI Lubricants Distributors</strong>
+            <p>Commercial vehicle spare parts (LEYPARTS) &amp; official ENI Lubricants distributors for Nellore</p>
           </div>
 
           <a

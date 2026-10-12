@@ -54,7 +54,7 @@ export default function ShopByVehicle() {
         'Brake & Clutch Hydraulic Fluids',
         'Synthetic & Mineral Lubricating Greases',
       ],
-      brands: ['All Major Oil Brands', 'Castrol', 'Shell', 'Mobil', 'Gulf', 'Servo', 'MAK'],
+      brands: ['ENI (Distributors)', 'All Major Oil Brands', 'Castrol', 'Shell', 'Mobil', 'Gulf', 'Servo', 'MAK'],
       whatsappPreset: {
         category: 'Passenger Car Lubricants',
         vehicle: 'Passenger Car (Petrol/Diesel)',
@@ -77,7 +77,7 @@ export default function ShopByVehicle() {
         'Anti-Wear Hydraulic Oils (AW-46, AW-68) for Tippers',
         'High-Load Wheel Bearing & Chassis Greases',
       ],
-      brands: ['Ashok Leyland LEYPARTS', 'VALUEPARTS', 'All Major Oil Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK'],
+      brands: ['Ashok Leyland LEYPARTS', 'VALUEPARTS', 'ENI Lubricants (Distributors)', 'All Major Oil Brands', 'Castrol', 'Gulf', 'Shell', 'Servo', 'MAK'],
       whatsappPreset: {
         category: 'Commercial Vehicle Spare Parts & Heavy Oils',
         vehicle: 'Commercial Truck / Tipper / Lorry',
@@ -98,7 +98,7 @@ export default function ShopByVehicle() {
         'Hydraulic Lift & Implement Fluids (AW-68)',
         'Water-Resistant Chassis & Bearing Greases',
       ],
-      brands: ['All Major Oil Brands', 'Veedol', 'Gulf', 'MAK', 'Servo', 'Castrol'],
+      brands: ['ENI (Distributors)', 'All Major Oil Brands', 'Veedol', 'Gulf', 'MAK', 'Servo', 'Castrol'],
       whatsappPreset: {
         category: 'Tractor & Agricultural Machinery Oils',
         vehicle: 'Tractor / Agricultural Equipment',

@@ -50,7 +50,7 @@ export default function ContactSection() {
             <div className="storefront-details-bar">
               <div>
                 <strong className="storefront-name">{BUSINESS.name}</strong>
-                <p className="storefront-sub">Ashok Leyland Retail Parts Store &amp; All Major Company Lubricants Counter</p>
+                <p className="storefront-sub">Ashok Leyland Retail Parts Store &amp; ENI Lubricants Distributors for Nellore</p>
               </div>
               <a
                 href={BUSINESS.mapsUrl}

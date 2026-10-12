@@ -12,7 +12,7 @@
 - **WhatsApp**: [+91 94405 29777](https://wa.me/919440529777)
 - **Primary Product Divisions**:
   1. **Commercial Vehicle Spare Parts**: Ashok Leyland Retail Parts Store, supplying genuine LEYPARTS boxed components and VALUEPARTS maintenance range for heavy commercial trucks, tippers, and haulers.
-  2. **Automotive Oils, Lubricants & Greases**: Heavy diesel engine oils, passenger car oils, 4T/2T motorcycle lubricants, differential gear oils, anti-wear hydraulic fluids, and wheel bearing greases from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HPCL, and more).
+  2. **Automotive Oils, Lubricants & Greases**: Official ENI Lubricants Distributors for Nellore, alongside heavy diesel engine oils, passenger car oils, 4T/2T motorcycle lubricants, differential gear oils, anti-wear hydraulic fluids, and wheel bearing greases from all major oil companies (Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, HPCL, and more).
 
 ---
 
@@ -122,4 +122,4 @@ This repository is pre-configured for one-click deployment on Vercel:
 
 ## 📄 License & Disclaimers
 
-All trademarks, brand names, and logos (Ashok Leyland, LEYPARTS, VALUEPARTS, Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and other oil companies) belong to their respective manufacturers. New Venkateswara Oil & Automobiles operates as an independent automotive retail enterprise in Auto Nagar, Nellore.
+All trademarks, brand names, and logos (Ashok Leyland, LEYPARTS, VALUEPARTS, ENI, Castrol, Gulf, Shell, Mobil, Servo, MAK, Veedol, and other oil companies) belong to their respective manufacturers. New Venkateswara Oil & Automobiles operates as an official ENI Lubricants distributor and independent automotive parts enterprise in Auto Nagar, Nellore.
