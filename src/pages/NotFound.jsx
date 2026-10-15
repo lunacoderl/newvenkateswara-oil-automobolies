@@ -10,6 +10,7 @@ export default function NotFound() {
         title="Page Not Found | New Venkateswara Oil & Automobiles"
         description="The page you requested could not be found. Return to New Venkateswara Oil & Automobiles in Auto Nagar, Nellore."
         canonicalPath="/404"
+        noIndex={true}
       />
 
       <div className="container">

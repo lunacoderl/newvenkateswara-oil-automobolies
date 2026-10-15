@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BUSINESS } from '../data/business';
+import { siteSeo } from '../siteSeo';
 
 /**
  * SEO Head Component
@@ -12,6 +13,7 @@ export default function SEO({
   canonicalPath = '/',
   ogType = 'website',
   schemaData = null,
+  noIndex = false,
 }) {
   const fullTitle = title
     ? `${title}`
@@ -34,6 +36,15 @@ export default function SEO({
     }
     metaDescriptionTag.content = metaDesc;
 
+    // Update Meta Robots
+    let metaRobotsTag = document.querySelector('meta[name="robots"]');
+    if (!metaRobotsTag) {
+      metaRobotsTag = document.createElement('meta');
+      metaRobotsTag.name = 'robots';
+      document.head.appendChild(metaRobotsTag);
+    }
+    metaRobotsTag.content = noIndex ? 'noindex, follow' : 'index, follow';
+
     // Update OG Tags
     const updateMeta = (prop, content) => {
       let tag = document.querySelector(`meta[property="${prop}"]`);
@@ -49,15 +60,17 @@ export default function SEO({
     updateMeta('og:description', metaDesc);
     updateMeta('og:type', ogType);
 
-    // Update Canonical
+    // Update Canonical using approved production domain
     let canonicalTag = document.querySelector('link[rel="canonical"]');
     if (!canonicalTag) {
       canonicalTag = document.createElement('link');
       canonicalTag.rel = 'canonical';
       document.head.appendChild(canonicalTag);
     }
-    const origin = typeof window !== 'undefined' ? window.location.origin : '';
-    canonicalTag.href = `${origin}${canonicalPath}`;
+    const cleanPath = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
+    const finalCanonical = `${siteSeo.baseUrl}${cleanPath === '/' ? '/' : cleanPath}`;
+    canonicalTag.href = finalCanonical;
+    updateMeta('og:url', finalCanonical);
 
     // Update JSON-LD structured data if provided
     let scriptTag = document.getElementById('json-ld-structured-data');
