@@ -1,10 +1,7 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/services/:slug", "destination": "/index.html" },
-    { "source": "/privacy-policy", "destination": "/index.html" },
-    { "source": "/terms-conditions", "destination": "/index.html" },
-    { "source": "/terms-and-conditions", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {

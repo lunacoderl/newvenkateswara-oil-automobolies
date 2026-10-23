@@ -28,4 +28,11 @@
 5. `index.html`
    - Added initial canonical `<link rel="canonical" href="https://www.newvenkateswara-oil-automobolies.online/" />` and Open Graph URL.
 6. `vercel.json`
-   - Replaced open catch-all rewrite with an explicit route whitelist (`/`, `/services/:slug`, `/privacy-policy`, `/terms-conditions`, `/terms-and-conditions`), enabling native HTTP 404 responses for arbitrary invalid URLs.
+   - Updated SPA rewrite rule to standard `{ "source": "/(.*)", "destination": "/index.html" }` to allow React Router to handle all subpaths cleanly and serve `NotFound` with `noIndex` on unrecognized routes.
+
+---
+
+## [2026-10-23] - GSC Page Indexing & Vercel SPA Rewrite Overhaul
+- **Fixed Root Cause of GSC 404 Route Rejection**: Replaced the restrictive route whitelist in `vercel.json` with universal SPA rewrite `{ "source": "/(.*)", "destination": "/index.html" }` ensuring subpaths like `/services` or direct navigations don't return raw edge 404s. Unrecognized paths are handled by `NotFound.jsx` with `<meta name="robots" content="noindex, follow">`.
+- **Enriched Sitemap with Google Images**: Added `<image:image>` metadata for brand banner and all 5 individual oil & spare parts products in `public/sitemap.xml`.
+
